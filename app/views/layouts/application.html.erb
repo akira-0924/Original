@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introducing the rock band</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="stylesheets/jquery.steps.scss">
+    <link rel="stylesheet" href="stylesheets/main.scss">
+    <link rel="stylesheet" href="stylesheets/normalize.scss">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <header>
+    <div class="drawer">
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+      <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+      <label for="drawer-check" class="drawer-open"><span></span></label>
+        <nav class="drawer-content">
+          <ul class="drawer-list">
+            <li class="drawer-item">
+              <%= link_to "アーティスト一覧", artists_path %>
+            </li>
+            <li class="drawer-item">
+              <%= link_to "投稿する", new_artist_path %>
+            </li>
+            <li class="drawer-item">
+            <% if user_signed_in? %>
+              <%= link_to "マイページ", user_path(current_user.id) %>
+              <% end %>
+            </li>
+            <li class="drawer-item">
+              <%= link_to "トップページ", top_path %>
+            </li>
+            <li class="drawer-item">
+              <%= link_to "診断する", new_check_path, data: {"turbolinks" => false}%>
+            </li>
+            <li class="drawer-item">
+              <%= link_to "新規登録", new_user_registration_path %>
+            </li>
+            <li class="drawer-item">
+              <% if user_signed_in? %>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+              <% else %>
+                <%= link_to "ログイン", artists_path %>
+              <% end %>
+            </li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+    <%= yield %>
+    </body>
+    <footer>
+      Copyright © GeekSalon All Rights Reserved.
+    </footer>
+</html>

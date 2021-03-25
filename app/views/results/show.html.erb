@@ -1,0 +1,27 @@
+<div class="main">
+  <div class="atshow-header">
+    <h1>Artist details</h1>
+  </div>
+  <div class="artist">
+    <div class="img_name">
+      <%= image_tag @result.image_url, size: "350x350" if @result.image? %>
+      <br><%= @result.band_name %>
+    </div>
+    <h3>RECOMMEND</h3>
+    <div class="recommend">
+      <p><%= @result.recommend %>
+      <a href ="<%= @result.m_video %>"><i class="fab fa-youtube"></i></a></p>
+    </div>
+    <h3>GENRE</h3>
+    <div class="genre">
+      <p><%= @result.genre %></p>
+    </div>
+    <h3>DESCRIPTION</h3>
+    <div class="more">
+      <p><%= @result.discription %></p>
+    </div>
+    <div class="bt-area user_render">
+      <%= link_to "マイページに戻る", user_path(@user),{class: "link_to"} %>
+    </div>
+  </div>
+</div>

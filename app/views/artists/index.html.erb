@@ -1,0 +1,54 @@
+<%= stylesheet_link_tag "at_index", :media => "all" %>
+<div class="main">
+  <div class="main-container">
+    <div class="at_header">
+      <h1><i class="fas fa-headphones fa-xs"></i>Artist List<i class="fas fa-headphones fa-xs"></i></h1>
+    </div>
+    <div class="content">
+        <div class="search_header">
+            <h3>SEARCH</h3>
+        </div>
+        <div class="search_content">
+          <%= form_tag({controller:"artists",action:"index"}, method: :get) do %>
+              <span class="search_ge">genre　</span>
+             <%= select_tag "genre", options_for_select([["All", ""],["ポップス", "ポップス"],["ロック","ロック"],["ヒップホップ", "ヒップホップ"],["ジャズ","ジャズ"],["レゲエ", "レゲエ"],["クラシック","クラシック"],["ブルース", "ブルース"],["EDM","EDM"],["エレクトロニカ", "エレクトロニカ"],["ファンク","ファンク"],["メタル", "メタル"],["フォーク","フォーク"],["インスト", "インスト"],["R&B","R&B"]]),class:"search_genre" %>
+                <br><span class="search_ge">洋or邦　</span>
+                <%= select_tag "or", options_for_select([["All", ""],["邦楽", "邦楽"],["洋楽","洋楽"]]) %>
+                <br><%= text_field_tag :search ,"",{class:'search_field',value: params[:search] } %>
+                <%= button_tag type:"submit" ,class: 'search-btn' do %>
+                  <i class="fas fa-search"></i>
+                <% end %>
+            <% end %>
+        </div>
+      <div class="artists-container">
+        <% @artists.each do |t| %>
+          <div class="artists">
+            <div class="allimages butoon mouse">
+              <%= link_to artist_path(t.id), method: :get do %>
+                <span class="outborder"><%= image_tag t.image_url,class: "images", size: "270x270" if t.image? %></span>
+              <% end %>
+            </div>
+              <br><% if user_signed_in? %>
+                <% if current_user.already_liked?(t) %>
+                  <%= link_to artist_like_path(id: t.id, artist_id: t.id), method: :delete do %>
+                    <i class="fas fa-star"></i><%= t.likes.count %>
+                  <% end %>
+                <% else %>
+                  <%= link_to artist_likes_path(id: t.id, artist_id: t.id), method: :post do %>
+                    <i class="fas fa-star"></i><%= t.likes.count %>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <i class="fas fa-star"></i><%= t.likes.count %>
+              <% end %>
+              <%= link_to t.at_name, artist_path(t.id) %>
+              <% if user_signed_in? && current_user.id == t.user_id %>
+                <%= link_to "編集", edit_artist_path(t.id) %>
+                <%= button_to "削除", artist_path(t.id), method: :delete %>
+              <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

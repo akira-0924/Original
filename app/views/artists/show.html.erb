@@ -1,0 +1,36 @@
+<%= stylesheet_link_tag "at_show", :media => "all" %>
+<div class="main">
+  <div class="artist_show">
+    <div class="atshow-header">
+      <h1>Artist details</h1>
+    </div>
+    <div class="artist">
+      <div class="img_name">
+        <%= image_tag @artist.image_url, size: "350x350" if @artist.image? %>
+        <br><%= @artist.at_name %>
+      </div>
+      <h3>RECOMMEND</h3>
+      <div class="recommend">
+        <p><%= @artist.recommend %></p>
+      </div>
+      <h3>GENRE</h3>
+      <div class="genre">
+        <p><%= @artist.genre %></p>
+      </div>
+      <h3>DESCRIPTION</h3>
+      <div class="more">
+        <p><%= @artist.more %></p>
+      </div>
+      <h3>OTHERS RECOMMEN ARTIST</h3>
+      <div class="other">
+        <p><%= @artist.other %></p>
+      </div>
+      <div class="bt-area">
+        <% if user_signed_in? && current_user.id == @artist.user_id %>
+          <%= link_to "編集する", edit_artist_path(@artist.id),{class: "link_to"} %>
+        <% end %>
+        <%= link_to "アーティスト一覧に戻る", artists_path,{class: "link_to"} %>
+      </div>
+    </div>
+  </div>
+</div>

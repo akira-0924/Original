@@ -1,0 +1,90 @@
+
+.login_container{
+    width:40%;
+    height:100%;
+    margin:100px auto;
+    text-align: center;
+    color:white;
+    border-radius: 20px;
+    background-color: rgba(181, 181, 181, 0.7);
+    padding:15px 0px;
+}
+
+.login_header{
+    font-family: 'Shadows Into Light', cursive;
+    font-size:26px;
+}
+
+.field{
+    width:80%;
+    margin:0 auto;
+    font-family: 'Shadows Into Light', cursive;
+    font-size:20px;
+}
+
+
+input[type="email"]{
+    border-radius: 5px;
+    padding:5px 0px;
+    width:60%;
+    border:1px solid rgb(89, 89, 89);
+    margin-bottom:15px;
+}
+
+input[type="password"]{
+    border-radius: 5px;
+    padding:5px 0px;
+    width:60%;
+    border:1px solid rgb(89, 89, 89);
+}
+
+.login{
+    margin-top:20px;
+    width:50%;
+    padding:5px;
+    background-color: rgba(255, 220, 168, 0.8);
+    border-radius: 2px;
+}
+
+.login_re{
+    display: inline-block;
+    text-decoration: none;
+    margin-top:15px;
+    font-size:20px;
+}
+
+.remember{
+    display: inline-block;
+    text-decoration: none;
+    margin-top:5px;
+}
+
+.log_label{
+    display: inline-block;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.login_name{
+    border-radius: 5px;
+    padding:5px 0px;
+    width:60%;
+    border:1px solid rgb(89, 89, 89);
+    margin-bottom:15px;
+}
+
+.signin{
+    margin-top:50px;
+    width:50%;
+    padding:5px;
+    background-color: rgba(255, 220, 168, 0.8);
+    border-radius: 2px;
+}
+
+.delete{
+    margin-top:20px;
+    width:50%;
+    padding:5px;
+    background-color: rgba(250, 132, 132, 0.8);
+    border-radius: 2px;
+}

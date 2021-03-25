@@ -1,0 +1,23 @@
+<div class="main">
+  <h2 class="result_title">あなたにオススメしたいバンドは...</h2>
+    <div class="result_container">
+        <% @check.each do |t| %>
+            <div class="result Result1">
+                <%= image_tag t.result.image_url,class:"result_img", width: "60%" , height:"60%" if t.result.image?  %>
+                    <h1><%= t.result.band_name %></h1>
+                <div class="rock_genre">
+                    <i class="fas fa-guitar"></i><label class="rock_lab">genre</label>
+                    <p class="genre_br"><%= t.result.genre %></p>
+                </div>
+                    <br><i class="fas fa-guitar"></i><label class="rock_lab">recommend</label>
+                    <p class="mu_br"><%= t.result.recommend %>
+                    <a href ="<%= t.result.m_video %>"><i class="fab fa-youtube"></i></a></p>
+                    <br><i class="fas fa-guitar"></i><label class="rock_lab">Description</label>
+                    <p class="de_br"><%= t.result.discription %></p>
+                <div class="bt-area">
+                    <%= link_to "リトライ", new_check_path, data: {"turbolinks" => false} %>
+                </div>
+            </div> 
+        <% end %>
+    </div>
+</div>

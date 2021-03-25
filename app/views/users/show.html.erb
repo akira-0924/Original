@@ -1,0 +1,63 @@
+<%= stylesheet_link_tag "user_show", :media => "all" %>
+<div class="main">
+  <div class="artist_new">
+    <div class="user_mypage">
+      <div class="user_title">
+        <div class="CHECK2">
+          <h1><span>M</span>
+          <span>Y</span>
+          <span>P</span>
+          <span>A</span>
+          <span>G</span>
+          <span>E</span></h1>
+        </div>
+        <div class="user_info">
+          <p>Name: <%= @user.name %></p>
+          <p>Mail : <%= @user.email %></p>
+          <p>Profile : <%= @user.profile %></p>
+          <% if current_user.id == @user.id %>
+          <div class="bt-area">
+            <%= link_to "edit", edit_user_registration_path , class: 'btn'%>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <h2>診断一覧</h2>
+      <div class="artists-container">
+        <% @checks.each do |t| %>
+          <div class="artists myartists">
+            <%= link_to result_path(t.result.id), method: :get do %>
+              <%= image_tag t.result.image_url,class:"user_show", size: "150x150" if t.result.image? %>
+              <span class="user_check"><%= link_to t.result.band_name, result_path(t.result.id) %></span>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <h2>投稿一覧</h2>
+      <div class="artists-container">
+        <% @user.artists.each do |t| %>
+          <div class="artists myartists">
+          <%= link_to artist_path(t.id), method: :get do %>
+            <%= image_tag t.image_url,class:"user_show", size: "150x150" if t.image? %>
+            <br><%= link_to t.at_name, artist_path(t.id) ,{class:"user_name"} %>
+          <% end %> 
+          </div>
+        <% end %>
+        </div>
+      <h2>いいね一覧</h2>
+      <div class="artists-container">
+        <% @user.liked_artists.each do |t| %>
+          <div class="artists myartists">
+          <%= link_to artist_path(t.id), method: :get do %>
+            <%= image_tag t.image_url,class:"user_show", size: "150x150" if t.image? %>
+            <br><%= link_to t.at_name, artist_path(t.id) %>
+          <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="bt-area">
+        <%= link_to "アーティスト一覧に戻る", artists_path,{class: "link_to"} %>
+      </div>
+    </div>
+  </div>
+</div>

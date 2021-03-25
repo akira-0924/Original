@@ -1,0 +1,91 @@
+.new_field{
+    width:50%;
+    background-color:rgba(255, 255, 255, 0.6);
+    margin:0px auto;
+    text-align:center;
+    border-radius:30px;
+    padding:20px 0px;
+    margin-bottom:55px;
+    overflow: hidden;
+}
+
+.new_title{
+    display:block;
+    padding:5px 5px;
+    text-align: center;
+    color:white;
+    font-size:20px;
+    text-shadow: 2px 2px 2px #a9a9a9;
+}
+
+.new_field li{
+    color:rgb(0, 0, 0);
+    list-style: none;
+}
+
+.submit-btn{
+    margin-top:30px;
+    display: inline-block;
+    font-size:15px;
+    width: 100px;
+    height: 40px;
+    border:1px solid black;
+    border-radius:8px;
+    box-shadow: 0px 5px black;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.submit-btn:active{
+    box-shadow: none;
+    position:relative;
+    top:5px;
+}
+
+.new_detail{
+    font-size:25px;
+    margin-top:15px;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.new_text{
+    border-radius:5px;
+    padding:4px 0px;
+   width:80%;
+}
+
+.artist_new{
+    animation: artists_top 0.6s ease-in-out;
+}
+
+.img_post{
+    text-align: center;
+    width:40%;
+}
+
+.CHECK3 {
+    perspective: 1000px;
+}
+
+.CHECK3 span {
+    display: inline-block;
+    margin: 0 .15em;
+    transform-origin: 50% 50% ;
+    transform-style: preserve-3d;
+    animation: CHECK3 3.8s 1 0.6s;
+    font-size:34px;
+    color:rgba(255, 255, 255,0.9);
+    font-family: 'Shadows Into Light', cursive;
+}
+  @keyframes CHECK3 {
+    0% {
+      transform: rotateX(-360deg);
+    }
+    70% {
+      transform: rotateX(0);
+    }
+  }

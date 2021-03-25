@@ -1,0 +1,65 @@
+<%= stylesheet_link_tag "at_new", :media => "all" %>
+<div class="main">
+  <div class="artist_new">
+    <div class="new_title">
+      <div class="CHECK3">
+        <h1><span>P</span>
+        <span>O</span>
+        <span>S</span>
+        <span>T</span></h1>
+      </div>
+    </div>
+    <%= form_for @artist do |f| %>
+      <div class="new_field">
+      <ul>
+        <div class="new_detail">
+          <li><%= f.label :アーティスト名 %></li>
+        </div>
+          <li><%= f.text_field :at_name, :size => 50 , class: 'new_text' %></li>
+          <div class="new_detail">
+            <li><%= f.label :ジャンル %></li>
+          </div>
+          <li><%= f.select :genre, [["ポップス", "ポップス"], 
+          ["ロック", "ロック"], 
+          ["ヒップホップ", "ヒップホップ"],
+          ["ジャズ","ジャズ"],
+          ["レゲエ", "レゲエ"], 
+          ["クラシック", "クラシック"],
+          ["ブルース","ブルース"],
+          ["EDM","EDM"],
+          ["エレクトロニカ","エレクトロニカ"],
+          ["ファンク","ファンク"],
+          ["メタル","メタル"],
+          ["フォーク","フォーク"],
+          ["インスト","インスト"],
+          ["R&B","R&B"]],include_blank: "選択して下さい", class: 'new_text' %></li>
+          <div class="new_detail">
+            <li><%= f.label :邦楽or洋楽 %></li>
+          </div>
+            <li><%= f.select :or, [["邦楽","邦楽"],
+          ["洋楽","洋楽"]],include_blank: "選択して下さい" %></li>
+          <div class="new_detail">
+            <li><%= f.label :おすすめ一曲 %></li>
+          </div>
+            <li><%= f.text_field :recommend, :size => 50, class: 'new_text' %></li>
+          <div class="new_detail">
+            <li><%= f.label :説明 %></li>
+          </div>
+            <li><%= f.text_area :more, :size => "50*50" , class: 'new_text'%></li>
+          <div class="new_detail">
+            <li><%= f.label :その他おすすめのアーティスト, class: 'new_text' %></li>
+          </div>
+            <li><%= f.text_field :other, :size => 50, class: 'new_text' %></li>
+          <div class="new_detail">
+            <li><%= f.label :画像 %></li>
+          </div>
+          <li><%= f.file_field :image , class: 'new_text img_post' %></li>
+      </ul>
+        <%= f.submit "投稿する" , class: 'submit-btn' %>
+    <% end %>
+    </div>
+    <div class="bt-area">
+      <%= link_to "アーティスト一覧に戻る", artists_path %>
+    </div>
+  </div>
+</div>

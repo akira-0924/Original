@@ -1,0 +1,117 @@
+.artist_show{
+    animation: artists_top 0.7s ease-in-out;
+}
+
+.artist{
+    text-align:center;
+    margin-top:20px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.artist h3{
+    color:rgb(255, 255, 255);
+    letter-spacing:10px;
+    margin:40px 10px 10px 30px;
+}
+
+.atshow-header{
+    display: inline-block;
+    padding-top:0px;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    margin-left:42%;
+    font-family: 'Shadows Into Light', cursive;
+    font-size:25px;
+    text-shadow: 2px 3px 2px #5e5e5e;
+}
+
+.atshow-header:hover{
+    color:rgb(255, 0, 0);
+    
+    }
+
+.img_name{
+    padding-top:25px;
+    width:400px;
+    height:400px;
+    background-color:rgba(255, 255, 255, 0.6);
+    margin:0 auto;
+    color:black;
+    border-radius: 20px;
+    font-size:30px;
+}
+
+.img_name:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all ease-in-out 0.2s;
+}
+
+.img_name img{
+    border-radius: 10px;
+    }
+
+.recommend{
+    width:40%;
+    margin:0 auto;
+    color:black;
+    background-color:rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:5px 10px;
+}
+
+.recommend:hover{
+    background-color:  rgba(255, 255, 255, 0.9);
+    transition: all ease-in-out 0.2s;
+}
+
+.more{
+    color:black;
+    width:80%;
+    margin:0 auto;
+    background-color:rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding:20px 25px;
+}
+
+.more p{
+    font-size:22px;
+}
+
+.other{
+    background-color:  rgba(255, 255, 255, 0.6);
+    width:30%;
+    padding:5px 0px;
+    margin:0 auto;
+    border-radius: 10px;
+    margin-bottom:55px;
+}
+
+
+
+.more:hover{
+    background-color:  rgba(255, 255, 255, 0.9);
+    transition: all ease-in-out 0.2s;
+}
+
+.other:hover{
+    background-color:  rgba(255, 255, 255, 0.9);
+    transition: all ease-in-out 0.2s;
+}
+
+.genre{
+    width:30%;
+    margin:0 auto;
+    color:black;
+    background-color:  rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:5px 10px;
+}
+
+.genre:hover{
+    background-color:  rgba(255, 255, 255, 0.9);
+    transition: all ease-in-out 0.2s;
+}

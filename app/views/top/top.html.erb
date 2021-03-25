@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag "ch_top", :media => "all" %>
+<div class="top_body">
+<div class="backimg">
+    <img src="/images/topback1.jpg" class="top_back1" width="100%" height="121%">
+    <img src="/images/topback2.jpg" class="top_back2" width="100%" height="121%">
+    <img src="/images/topback3.jpg" class="top_back3" width="100%" height="121%">
+    <img src="/images/topback4.jpg" class="top_back4" width="100%" height="121%">
+</div>
+    <div class="top_container">
+        <p class="top_disc">ロックの歴史をさかのぼると黒人霊歌にたどりつきます。黒人霊歌は黒人奴隷たちから生まれた音楽です。奴隷生活での苦しみからの解放を歌ったもので、これをベースにブルースが生まれます。ブルースからそのリズムを変化させてうまれたのがジャズです。ジャズはバンドで演奏されることが多く、その奏者はほとんどが黒人でした。そして、バンド演奏の中でブルースのリズムを早くして、演奏するスタイルが生まれてきます。リズム＆ブルース（R&B）です。第二次大戦後、アメリカでは仕事を求めて都市部に大量の人が流れ込み、それと同時に地方の文化や音楽も都市部で広がっていきます。ブルースやジャズ、R＆Bといった主に南部の黒人の音楽であったものがラジオやレコードを通して都市部に多くの人に届けられました。そして、黒人の音楽にふれ、その魅力にひきつけられる人が出てきます。それまで白人向けではなかった音楽に白人たちが興味を示したのです。そして1955年、ビル・ヘイリーが「ロック・アラウンド・ザ・クロック」をヒットさせます。この曲はそれまで、黒人の間で人気だった音楽を白人が歌ったことでヒットし、ロックというスタイルを世界に広める役割を果たしました。</p>
+        <div class="typ">
+         <span>Introducing the rock band</span>
+        </div>
+        <div class="top_icon">
+          <div class="CHECK">
+            <%= link_to new_check_path,data: {"turbolinks" => false}, method: :get do %>
+              <span>C</span>
+              <span>H</span>
+              <span>E</span>
+              <span>C</span>
+              <span>K</span>
+            <% end %>
+          </div>
+          ↓
+          <%= link_to new_check_path,data: {"turbolinks" => false}, method: :get do %>
+            <br><i class="fas fa-compact-disc fa-4x"></i>
+          <% end %>
+        </div>
+    </div>
+</div>

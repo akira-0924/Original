@@ -1,0 +1,13 @@
+<h3>バンド一覧</h3>
+<%= link_to "新規投稿", new_result_path %>
+  <% @results.each do |t| %>
+    <div class="r_all">
+        <%= image_tag t.image_url, size: "200x200" if t.image? %>
+        <br><%= t.band_name %>
+        <br><%= t.genre %>
+        <br><%= t.recommend %>
+        <br><%= t.discription %>
+        <br><%= t.m_video %>
+        <%= button_to "削除する", result_path(t.id), method: :delete %>
+    </div>
+  <% end %>
