@@ -14,23 +14,7 @@
 
 .main-container{
     padding-top:10px;
-    animation: at_start 3.5s;
-    visibility: visible;
 }
-    @keyframes at_start {
-        0% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        80%{
-            visibility: visible;
-            opacity: 0;
-        }
-        100% {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
 
 .at_header{
     text-align:center;
