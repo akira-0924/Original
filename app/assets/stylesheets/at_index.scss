@@ -209,35 +209,3 @@ height: calc(100% + 1px);
         
     }
 }
-
-.at_start{
-    width: 14ch;
-    display: inline-block;
-    overflow: hidden;
-    white-space:nowrap;
-    color:white;
-    font-family: 'Shadows Into Light', cursive;
-    font-size:50px;
-    text-shadow: 2px 2px 2px #000000;
-    animation: typing 1s steps(8),at_st2 2.6s ease;
-    position:absolute;
-    z-index:10;
-    top:43vh;
-    left:44%;
-    visibility: hidden;
-}
-
-@keyframes at_st2{
-    0%{
-        visibility: visible;
-        opacity: 1;
-    }
-    70%{
-        opacity: 1;
-        visibility: visible;
-    }
-    100%{
-        opacity: 0;
-        visibility: hidden;
-    }
-}
