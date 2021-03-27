@@ -16,52 +16,52 @@ class ChecksController < ApplicationController
         check.user_id = current_user.id
             # params[:q2]="選択1"
         if check.q2=="選択1" && check.q3=="選択5" && check.q4=="選択7"
-            @result = Result.find(1)
+            @result = Result.find(66)
             check.result_id = @result.id
           elsif check.q2=="選択1" && check.q3=="選択5" && check.q4=="選択8"
-            @result = Result.find(2)
+            @result = Result.find(67)
             check.result_id = @result.id
         elsif check.q2=="選択1" && check.q3=="選択6" && check.q4=="選択7"
-            @result = Result.find(3)
+            @result = Result.find(68)
             check.result_id = @result.id
         elsif check.q2=="選択1" && check.q3=="選択6" && check.q4=="選択8"
-            @result = Result.find(4)
+            @result = Result.find(69)
             check.result_id = @result.id
         elsif check.q2=="選択2" && check.q3=="選択5" && check.q4=="選択7"
-            @result = Result.find(5)
+            @result = Result.find(70)
             check.result_id = @result.id
         elsif check.q2=="選択2" && check.q3=="選択5" && check.q4=="選択8"
-            @result = Result.find(6)
+            @result = Result.find(71)
             check.result_id = @result.id
         elsif check.q2=="選択2" && check.q3=="選択6" && check.q4=="選択7"
-            @result = Result.find(7)
+            @result = Result.find(72)
             check.result_id = @result.id
         elsif check.q2=="選択2" && check.q3=="選択6" && check.q4=="選択8"
-            @result = Result.find(8)
+            @result = Result.find(73)
             check.result_id = @result.id
         elsif check.q2=="選択3" && check.q3=="選択5" && check.q4=="選択7"
-            @result = Result.find(9)
+            @result = Result.find(74)
             check.result_id = @result.id
         elsif check.q2=="選択3" && check.q3=="選択5" && check.q4=="選択8"
-            @result = Result.find(10)
+            @result = Result.find(75)
             check.result_id = @result.id
         elsif check.q2=="選択3" && check.q3=="選択6" && check.q4=="選択7"
-            @result = Result.find(11)
+            @result = Result.find(76)
             check.result_id = @result.id
         elsif check.q2=="選択3" && check.q3=="選択6" && check.q4=="選択8"
-            @result = Result.find(12)
+            @result = Result.find(77)
             check.result_id = @result.id
         elsif check.q2=="選択4" && check.q3=="選択5" && check.q4=="選択7"
-            @result = Result.find(13)
+            @result = Result.find(78)
             check.result_id = @result.id
         elsif check.q2=="選択4" && check.q3=="選択5" && check.q4=="選択8"
-            @result = Result.find(14)
+            @result = Result.find(79)
             check.result_id = @result.id
         elsif check.q2=="選択4" && check.q3=="選択6" && check.q4=="選択7"
-            @result = Result.find(15)
+            @result = Result.find(80)
             check.result_id = @result.id
         else
-            @result = Result.find(16)
+            @result = Result.find(81)
             check.result_id = @result.id
         end
 
