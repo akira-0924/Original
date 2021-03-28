@@ -1,10 +1,6 @@
-# https://rockintroduction.herokuapp.com/artists
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
+# Rails,HTML/CSS,jQueryを主に使用した音楽紹介サイト
+* リンク
+https://rockintroduction.herokuapp.com/artists
 * Ruby version
 
 * System dependencies
