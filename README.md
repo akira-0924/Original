@@ -1,6 +1,6 @@
 # Rails,HTML/CSS,jQueryを主に使用した音楽紹介サイト
 * リンク
-https://rockintroduction.herokuapp.com/artists
+<br>https://rockintroduction.herokuapp.com/artists
 * Ruby version
 
 * System dependencies
