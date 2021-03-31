@@ -3,7 +3,7 @@
     <div class="result_container">
         <% @check.each do |t| %>
             <div class="result Result1">
-                <%= image_tag t.result.image_url,class:"result_img", width: "60%" , height:"60%" if t.result.image?  %>
+                <%= image_tag t.result.image_url,class:"result_img", width: "80%" , height:"80%" if t.result.image?  %>
                     <h1><%= t.result.band_name %></h1>
                 <div class="rock_genre">
                     <i class="fas fa-guitar"></i><label class="rock_lab">genre</label>
