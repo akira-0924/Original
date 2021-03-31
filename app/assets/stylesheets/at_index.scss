@@ -209,3 +209,41 @@ height: calc(100% + 1px);
         
     }
 }
+
+
+@media screen and (max-width:480px) {
+    .at_header{
+        text-align:center;
+        color:white;
+        font-family: 'Shadows Into Light', cursive;
+        letter-spacing: 4px;
+        font-size:20px;
+    }
+    .search_content{
+        display: block;
+        width:60%;
+        margin: 0 auto;
+        
+        background-color: rgba(167, 167, 167, 0.6);
+        border-radius: 10px;
+        padding:10px 0px 10px 60px;
+    }
+    
+    .search_header{
+        text-align: center;
+        font-family: 'Shadows Into Light', cursive;
+        letter-spacing: 5px;
+        color:white;
+        width:100%;
+        margin:0 auto;
+        font-size:20px;
+    }
+    .artists-container{
+        width:90%;
+    }
+
+    .artists{
+        margin-left:30px;
+    }
+    
+}
