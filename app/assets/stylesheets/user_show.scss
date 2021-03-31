@@ -165,3 +165,18 @@
         visibility: hidden;
     }
 }
+
+
+@media screen and (max-width:480px) {
+    .at_start{
+        width: 14ch;
+        font-size:30px;
+        position:absolute;
+        z-index:10;
+        top:43vh;
+        left:35%;
+    }
+    .user_info{
+        width:80%;
+    }
+}
