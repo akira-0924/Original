@@ -115,3 +115,23 @@
     background-color:  rgba(255, 255, 255, 0.9);
     transition: all ease-in-out 0.2s;
 }
+
+
+@media screen and (max-width:480px) {
+    .img_name{
+        width:90%;
+        height:350px;
+    }
+    .recommend{
+        width:80%;
+    }
+    .genre{
+        width:80%;
+    }
+    .other{
+        width:80%;
+    }
+    .atshow-header{
+        margin-left:22%;
+    }
+}
