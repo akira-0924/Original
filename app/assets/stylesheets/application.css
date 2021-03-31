@@ -185,4 +185,15 @@ footer{
     header{
         left:44%;
     }
+    
+    .drawer-item a{
+        font-size: 16px;
+    padding:15px 10px 15px 0px;
+    }
+    .drawer-content {
+        width: 40%;
+    }
+    #drawer-check:checked ~ .drawer-content {
+        right: 65%;
+    }
 }
