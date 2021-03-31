@@ -89,3 +89,20 @@
       transform: rotateX(0);
     }
   }
+
+
+@media screen and (max-width:480px) {
+    .new_field{
+        width:85%;
+    }
+    .new_field li{
+        width:90%;
+    }
+    .new_text{
+       width:100%;
+    }
+    .bt-area a {
+        width:80%;
+      }
+    
+}
