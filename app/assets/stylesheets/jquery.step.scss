@@ -592,3 +592,60 @@
         visibility: hidden;
     }
 }
+
+
+@media screen and (max-width:480px) {
+    .wizard > .content
+    {
+    display: block;
+    margin: 0.5em;
+    min-height: 35em;
+    min-width:20em;
+    height:50%;
+    width:95%;
+    margin:10px auto;
+    }
+    .label2{
+        display: block;
+        margin-left:0px;
+        font-size:20px;
+    }
+    .label1{
+        margin-left:0px;
+    }
+    .wizard > .content > .body input
+    {
+    display: inline-block;
+    border: 1px solid #ccc;
+    margin-left:30px;   
+    }
+    .wizard > .steps
+    {
+    width: 100%;
+    margin:20px auto;
+    padding:0;
+    }
+    
+    .wizard > .steps > ul > li
+    {
+    width: 33%;
+    }
+
+    .check_start{
+        left:35%;
+    }
+
+    .sindan_view{
+        position:absolute;
+        bottom:24px;
+        left:15%;
+    }
+
+    .result{
+        width:90%;
+    }
+
+    .mu_br{
+        width:90%;
+    }
+}
