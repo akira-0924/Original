@@ -31,11 +31,11 @@
               <br><% if user_signed_in? %>
                 <% if current_user.already_liked?(t) %>
                   <%= link_to artist_like_path(id: t.id, artist_id: t.id), method: :delete do %>
-                    <i class="fas fa-star"></i><%= t.likes.count %>
+                    <i class="fas fa-star star1"></i><%= t.likes.count %>
                   <% end %>
                 <% else %>
                   <%= link_to artist_likes_path(id: t.id, artist_id: t.id), method: :post do %>
-                    <i class="fas fa-star"></i><%= t.likes.count %>
+                    <i class="fas fa-star star2"></i><%= t.likes.count %>
                   <% end %>
                 <% end %>
               <% else %>
