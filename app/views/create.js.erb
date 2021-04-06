@@ -1,0 +1,2 @@
+
+	$('#likes_buttons<%= @artist.id %>').html("<%= j(render partial: 'likes/like', locals: {tt: @artist}) %>");
