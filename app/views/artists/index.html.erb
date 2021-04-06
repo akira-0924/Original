@@ -28,19 +28,9 @@
                 <span class="outborder"><%= image_tag t.image_url,class: "images", size: "270x270" if t.image? %></span>
               <% end %>
             </div>
-              <br><% if user_signed_in? %>
-                <% if current_user.already_liked?(t) %>
-                  <%= link_to artist_like_path(id: t.id, artist_id: t.id), method: :delete do %>
-                    <i class="fas fa-star star1"></i><%= t.likes.count %>
-                  <% end %>
-                <% else %>
-                  <%= link_to artist_likes_path(id: t.id, artist_id: t.id), method: :post do %>
-                    <i class="fas fa-star star2"></i><%= t.likes.count %>
-                  <% end %>
-                <% end %>
-              <% else %>
-                <i class="fas fa-star"></i><%= t.likes.count %>
-              <% end %>
+              <i id="likes_buttons<%= t.id %>">
+                <%= render partial: 'likes/like', locals: { tt: t} %>
+              </i>
               <%= link_to t.at_name, artist_path(t.id) %>
               <% if user_signed_in? && current_user.id == t.user_id %>
                 <%= link_to "編集", edit_artist_path(t.id) %>
