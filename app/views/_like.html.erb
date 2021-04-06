@@ -1,0 +1,13 @@
+<br><% if user_signed_in? %>
+  <% if current_user.already_liked?(tt) %>
+    <%= link_to artist_like_path(id: tt.id, artist_id: tt.id), method: :delete, remote: true do %>
+      <i class="fas fa-star star1"></i><%= tt.likes.count %>
+    <% end %>
+  <% else %>
+    <%= link_to artist_likes_path(id: tt.id, artist_id: tt.id), method: :post, remote: true do %>
+      <i class="far fa-star star2"></i><%= tt.likes.count %>
+    <% end %>
+  <% end %>
+<% else %>
+  <i class="far fa-star"></i><%= tt.likes.count %>
+<% end %>
