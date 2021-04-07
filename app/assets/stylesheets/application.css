@@ -149,7 +149,7 @@ header p{
     padding:15px 10px 15px 40px;
     margin:0px auto;
     text-align: center;
-    width:50%;
+    width:20%;
     font-weight:bold;
     transition: all ease 0.5s;
 }
@@ -181,6 +181,17 @@ footer{
   width:80%;
   margin:0 auto;
   background-color: blue;
+}
+.drawer-item2 a{
+    animation:itema 1.6s ease forwards;
+}
+@keyframes itema {
+    0% {
+       opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width:480px) {
