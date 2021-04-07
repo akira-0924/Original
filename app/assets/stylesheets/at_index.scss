@@ -143,13 +143,13 @@ height: calc(100% + 1px);
 .star2{
     color:rgb(255, 255, 255);
 }
-.star2:active{
-    transition: all 0.18s ease;
-    transform:scale(0.2);
-}
 .star1:active{
     transition: all 0.18s ease;
-    transform:scale(0.2);
+    transform:scale(1.6);
+}
+.star2:active{
+    transition: all 0.18s ease;
+    transform:scale(1.6);
 }
 
 .search-btn{
