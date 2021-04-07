@@ -196,3 +196,9 @@ $(window).on('load scroll', function (){
 	});
   
 });
+
+$(function() {
+	$("#drawer-check").on("click", function(){
+			$(".drawer-item").toggleClass('drawer-item2');
+	});
+});
