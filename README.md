@@ -1,4 +1,4 @@
-# Rails,HTML/CSS,jQueryを主に使用した音楽紹介サイト
+# Rails,HTML/CSS,jQueryを主に使用した音楽診断サービス
  * リンク
  <br>https://rockintroduction.herokuapp.com/top
  * 使用言語
