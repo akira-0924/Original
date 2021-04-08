@@ -182,8 +182,26 @@ footer{
   margin:0 auto;
   background-color: blue;
 }
+.drawer-item0 a{
+    animation:itema 1.6s ease backwards;
+}
+.drawer-item1 a{
+    animation:itema 1.6s ease backwards 0.08s;
+}
 .drawer-item2 a{
-    animation:itema 1.6s ease forwards;
+    animation:itema 1.6s ease backwards 0.16s;
+}
+.drawer-item3 a{
+    animation:itema 1.6s ease backwards 0.24s;
+}
+.drawer-item4 a{
+    animation:itema 1.6s ease backwards 0.32s;
+}
+.drawer-item5 a{
+    animation:itema 1.6s ease backwards 0.4s;
+}
+.drawer-item6 a{
+    animation:itema 1.6s ease backwards 0.48s;
 }
 @keyframes itema {
     0% {
