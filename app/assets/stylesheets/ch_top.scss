@@ -396,13 +396,22 @@
 @media screen and (max-width:480px) {
 
     .top_body{
-      min-height:121vh;
+      min-height:102vh;
       width:100%;
       height:100%;
       background-size:cover;
       background-blend-mode:darken;
       position:relative;
       z-index:-1;
+  }
+   .top_back1,
+  .top_back2,
+  .top_back3,
+  .top_back4{
+    height:102%;
+  }
+  .backimg::before{
+    height:102%;
   }
 
   .top_container{
