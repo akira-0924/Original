@@ -214,10 +214,14 @@ footer{
 
 @media screen and (max-width:480px) {
     
+    .drawer-item{
+        margin-right:40px;
+    }
+    
     .drawer-item a{
-        width:80%;
-        font-size: 16px;
-    padding:15px 10px 15px 0px;
+        width:100%;
+        font-size: 20px;
+        padding:15px 0px;
     }
     header p{
         left:60px;
