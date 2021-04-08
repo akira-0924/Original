@@ -199,6 +199,12 @@ $(window).on('load scroll', function (){
 
 $(function() {
 	$("#drawer-check").on("click", function(){
-			$(".drawer-item").toggleClass('drawer-item2');
+			$(".dr0").toggleClass('drawer-item0');
+			$(".dr1").toggleClass('drawer-item1');
+			$(".dr2").toggleClass('drawer-item2');
+			$(".dr3").toggleClass('drawer-item3');
+			$(".dr4").toggleClass('drawer-item4');
+			$(".dr5").toggleClass('drawer-item5');
+			$(".dr6").toggleClass('drawer-item6');
 	});
 });
