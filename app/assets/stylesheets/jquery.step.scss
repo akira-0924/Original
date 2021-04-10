@@ -63,6 +63,7 @@
     width: 50%;
     margin:20px auto;
     padding:0;
+    min-width:35em;
 }
 
 .wizard.vertical > .steps
@@ -76,6 +77,7 @@
 .wizard > .steps .number
 {
     font-size: 1.429em;
+    display:none;
 }
 
 .wizard > .steps > ul > li
