@@ -95,24 +95,30 @@ input[type="password"]{
 @media screen and (max-width:480px) {
     .login_container{
         width:90%;
+        min-width: 90%;
     }
 
     .field{
         width:100%;
+        min-width: 100%;
     }
 
     .login_name{
         width:85%;
+        min-width: 85%;
     }
     
     .signin{
         width:85%;
+        min-width: 85%;
     }
     input[type="email"]{
         width:85%;
+        min-width: 85%;
     }
     
     input[type="password"]{
         width:85%;
+        min-width: 85%;
     }
 }
