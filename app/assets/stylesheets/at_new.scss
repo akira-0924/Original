@@ -7,6 +7,7 @@
     padding:20px 0px;
     margin-bottom:55px;
     overflow: hidden;
+    min-width:450px;
 }
 
 .new_title{
@@ -50,12 +51,14 @@
     font-size:25px;
     margin-top:15px;
     font-family: 'Noto Serif JP', serif;
+    margin-right: 40px;
 }
 
 .new_text{
     border-radius:5px;
     padding:4px 0px;
-   width:80%;
+    width:80%;
+    margin-right: 40px;
 }
 
 .artist_new{
