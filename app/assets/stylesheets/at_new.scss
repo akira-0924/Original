@@ -97,15 +97,20 @@
 @media screen and (max-width:480px) {
     .new_field{
         width:85%;
+        min-width: 85%;
     }
     .new_field li{
         width:90%;
+        min-width: 90%;
     }
     .new_text{
        width:100%;
+        min-width: 100%;
+       width:1000%;
     }
     .bt-area a {
         width:80%;
+        min-width: 80%;
       }
     
 }
