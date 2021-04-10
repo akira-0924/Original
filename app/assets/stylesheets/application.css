@@ -114,17 +114,6 @@ header p{
     transition: all ease 0.26s;
     overflow-y: scroll;  
 }
-.drawer-content::-webkit-scrollbar{
-    width:8px;
-}
-.drawer-content::-webkit-scrollbar-track{
-    border-radius: 10px;
-    background-color:rgba(222, 222, 222, 0.9);
-}
-.drawer-content::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    background-color:rgba(198, 198, 198, 0.9);
-}
 
 #drawer-check:checked ~ .drawer-content {
     top: 0%;
