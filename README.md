@@ -4,7 +4,7 @@ It is a service that introduces the best band as an entrance to rock for people 
 
 # DEMO
 <https://rockintroduction.herokuapp.com>
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+![プレゼン2](https://user-images.githubusercontent.com/80752599/114304654-610d2c00-9b0f-11eb-9a1d-11c4575fd52d.gif)
 
 # Features
 
