@@ -1,8 +1,6 @@
 # Introduce the rockband
  * link
  <br>https://rockintroduction.herokuapp.com/top
- * 使用言語
- <br>HTML/CSS<br>JavaScript<br>jQuery<br>Ruby on Rails
  
 * System dependencies
 
