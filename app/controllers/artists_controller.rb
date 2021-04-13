@@ -51,9 +51,8 @@ class ArtistsController < ApplicationController
       end
 
     def destroy
-        artist = Artist.find(params[:id])
-        artist.destroy
-        redirect_to action: :index
+        @artist = Artist.find(params[:id])
+        @artist.destroy
       end
       private
       def artist_params
