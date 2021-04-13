@@ -34,7 +34,9 @@
               <%= link_to t.at_name, artist_path(t.id) %>
               <% if user_signed_in? && current_user.id == t.user_id %>
                 <%= link_to "編集", edit_artist_path(t.id) %>
-                <%= button_to "削除", artist_path(t.id), method: :delete %>
+                  <i id="delete_buttons<%= t.id %>">
+                    <%= render partial: 'artists/destroy', locals: { tt: t} %>
+                  </i>
               <% end %>
           </div>
         <% end %>
