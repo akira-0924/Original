@@ -1,1 +1,8 @@
-<%= button_to "削除", artist_path(tt.id), method: :delete, remote: true %>
+<div class="delete_sentaku">
+    <div class="iie" id="yesno">
+        <a half="#">キャンセル</a>
+    </div>
+    <div class="hai" id="yesno">
+        <%= link_to "削除", artist_path(tt.id), method: :delete, remote: true %>
+    </div>
+</div>
