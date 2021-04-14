@@ -6,6 +6,7 @@
       </div>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= f.file_field :image , class: 'new_text img_post' %>
           <div class="field">
             <%= f.label :email %><br />
             <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
