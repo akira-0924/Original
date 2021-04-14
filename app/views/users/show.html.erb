@@ -12,6 +12,7 @@
           <span>E</span></h1>
         </div>
         <div class="user_info">
+        <%= image_tag @user.image_url,class: "user_image", size: "120x120" if @user.image? %>
           <p>Name: <%= @user.name %></p>
           <p>Mail : <%= @user.email %></p>
           <p>Profile : <%= @user.profile %></p>
@@ -27,7 +28,7 @@
         <% @checks.each do |t| %>
           <div class="artists myartists">
             <%= link_to result_path(t.result.id), method: :get do %>
-              <%= image_tag t.result.image_url,class:"user_show", size: "150x150" if t.result.image? %>
+              <%= image_tag t.result.image_url,class:"user_show", size: "150pxx150px" if t.result.image? %>
               <span class="user_check"><%= link_to t.result.band_name, result_path(t.result.id) %></span>
             <% end %>
           </div>
