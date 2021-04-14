@@ -10,7 +10,7 @@ Ajax processing is implemented for the like function and delete function for pos
 ![gif2](https://user-images.githubusercontent.com/80752599/114669208-964a9180-9d3c-11eb-8632-be5c8fcbed0f.gif)
 
 
-<img src="https://user-images.githubusercontent.com/80752599/114699551-6b236a80-9d5b-11eb-9522-a0a257e64dee.jpg" width="200px">   <img src="https://user-images.githubusercontent.com/80752599/114699855-ca817a80-9d5b-11eb-9f18-2dec4ae65b96.jpg" width="200px">   <img src="https://user-images.githubusercontent.com/80752599/114699940-e127d180-9d5b-11eb-83d4-183aea875e04.jpg" width="200px">
+<img src="https://user-images.githubusercontent.com/80752599/114699551-6b236a80-9d5b-11eb-9522-a0a257e64dee.jpg" width="200px">&emsp;<img src="https://user-images.githubusercontent.com/80752599/114699855-ca817a80-9d5b-11eb-9f18-2dec4ae65b96.jpg" width="200px">   <img src="https://user-images.githubusercontent.com/80752599/114699940-e127d180-9d5b-11eb-83d4-183aea875e04.jpg" width="200px">
 # Features
 
 Create a diagnostic-style introduction tool using jQuery steps
