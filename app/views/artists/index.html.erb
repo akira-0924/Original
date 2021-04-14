@@ -22,21 +22,28 @@
         </div>
       <div class="artists-container">
         <% @artists.each do |t| %>
-          <div class="artists">
+          <div class="artists" id="destroy_artist<%= t.id %>">
             <div class="allimages butoon mouse">
               <%= link_to artist_path(t.id), method: :get do %>
                 <span class="outborder"><%= image_tag t.image_url,class: "images", size: "270x270" if t.image? %></span>
               <% end %>
             </div>
-              <i id="likes_buttons<%= t.id %>">
-                <%= render partial: 'likes/like', locals: { tt: t} %>
-              </i>
+            <i id="likes_buttons<%= t.id %>">
+              <%= render partial: 'likes/like', locals: { tt: t} %>
+            </i>
               <%= link_to t.at_name, artist_path(t.id) %>
               <% if user_signed_in? && current_user.id == t.user_id %>
                 <%= link_to "編集", edit_artist_path(t.id) %>
-                  <i id="delete_buttons<%= t.id %>">
-                    <%= render partial: 'artists/destroy', locals: { tt: t} %>
-                  </i>
+                <br><i class="delete_button" id="delete_button1<%= t.id %>">削除</i>
+                <div class="modal1">
+                  <div class="modal_content">
+                    <span class="modal_title">投稿を削除</span>
+                    <span class="modal_dis">本当にこの投稿を削除してもよろしいですか？</span>
+                    <i id="delete_buttons<%= t.id %>">
+                      <%= render partial: 'artists/destroy', locals: { tt: t} %>
+                    </i>
+                  </div>
+                </div>
               <% end %>
           </div>
         <% end %>
