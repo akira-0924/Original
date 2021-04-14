@@ -11,6 +11,8 @@ Ajax processing is implemented for the like function and delete function for pos
 
 
 <img src="https://user-images.githubusercontent.com/80752599/114699551-6b236a80-9d5b-11eb-9522-a0a257e64dee.jpg" width="200px">
+<img src="https://user-images.githubusercontent.com/80752599/114699551-6b236a80-9d5b-11eb-9522-a0a257e64dee.jpg" width="200px">
+<img src="https://user-images.githubusercontent.com/80752599/114699551-6b236a80-9d5b-11eb-9522-a0a257e64dee.jpg" width="200px">
 # Features
 
 Create a diagnostic-style introduction tool using jQuery steps
