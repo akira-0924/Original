@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
         validates :name, presence: true #追記
         validates :profile, length: { maximum: 200 } #追記
-
+        mount_uploader :image, ImageUploader
 
         def already_liked?(artist)
           self.likes.exists?(artist_id: artist.id)
