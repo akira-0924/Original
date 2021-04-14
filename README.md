@@ -11,7 +11,7 @@ Ajax processing is implemented for the like function and delete function for pos
 
 
 <img src="https://user-images.githubusercontent.com/80752599/114699551-6b236a80-9d5b-11eb-9522-a0a257e64dee.jpg" width="200px">
-<img src="https://user-images.githubusercontent.com/80752599/114699551-6b236a80-9d5b-11eb-9522-a0a257e64dee.jpg" width="200px">
+<img src="https://user-images.githubusercontent.com/80752599/114699855-ca817a80-9d5b-11eb-9f18-2dec4ae65b96.jpg" width="200px">
 <img src="https://user-images.githubusercontent.com/80752599/114699551-6b236a80-9d5b-11eb-9522-a0a257e64dee.jpg" width="200px">
 # Features
 
