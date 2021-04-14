@@ -208,3 +208,11 @@ $(function() {
 			$(".dr6").toggleClass('drawer-item6');
 	});
 });
+$(function() {
+	$(".delete_button").on("click", function(){
+			$(this).nextAll(".modal1").fadeIn();
+	});
+	$(".iie").on("click", function(){
+		$(".modal1").hide();
+	});
+});
