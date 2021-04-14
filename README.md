@@ -9,9 +9,7 @@ It is a service that introduces the best band as an entrance to rock for people 
 Ajax processing is implemented for the like function and delete function for posts
 ![gif2](https://user-images.githubusercontent.com/80752599/114669208-964a9180-9d3c-11eb-8632-be5c8fcbed0f.gif)
 
-![IMG_6035](https://user-images.githubusercontent.com/80752599/114692799-eaad3b80-9d53-11eb-8117-e45979e8e5d6.jpg)
-![IMG_6036](https://user-images.githubusercontent.com/80752599/114692803-ed0f9580-9d53-11eb-82ad-9fcb5531f6c7.jpg)
-![IMG_6037](https://user-images.githubusercontent.com/80752599/114692805-ed0f9580-9d53-11eb-9039-4df30ab3e5d3.jpg)
+
 <img src="/Desktop/git1.jpg" width="横幅(100px)">
 # Features
 
