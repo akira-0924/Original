@@ -8,9 +8,20 @@
     background-blend-mode:darken;
     padding-bottom:50px;
     position:relative;
-    z-index:-1;
-    
+    z-index:-2;
 }
+.main::before{
+    content: ' ';
+    width:100%;
+    height: 100%;
+    position: absolute;
+    z-index:-1;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(75, 75, 75, 0.3);
+  }
 
 .main-container{
     padding-top:10px;
@@ -44,6 +55,7 @@
     margin-top:10px;
     text-align:center;
     flex-basis: 24%;
+    position: relative;
 }
 
 .artists a{
@@ -169,7 +181,7 @@ height: calc(100% + 1px);
     display: block;
     width:20%;
     margin: 0 auto;
-    min-width:300px;
+    min-width:15em;
     background-color: rgba(167, 167, 167, 0.6);
     border-radius: 10px;
     padding:10px 0px 10px 60px;
@@ -219,6 +231,85 @@ height: calc(100% + 1px);
         
     }
 }
+.abcde{
+    color:red;
+    background-color: aqua;
+}
+.modal1{
+    width:240px;
+    height:160px;
+    background-color: rgb(244, 244, 244);
+    position:absolute;
+    top:40px;
+    left:16px;
+    z-index:101;
+    border-radius: 10px;
+    display: none;
+}
+.modal_title{
+    display: inline-block;
+    width:100%;
+    padding-top:14px;
+    font-size:20px;
+    font-weight: bold;
+}
+.modal_dis{
+    display: inline-block;
+    width:90%;
+    margin:10px 0px auto;
+    font-style:normal;
+    font-size:14px;
+}
+.delete_button{
+    border:1px solid rgb(63, 63, 63);
+    padding:2px;
+    border-radius:3px;
+    background-color:rgb(230, 230, 230);
+    cursor: pointer;
+}
+
+.delete_sentaku{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    height:52px;
+    margin-top:17px; 
+    border-radius:0px 0px 10px 10px;
+}
+#yesno{
+    text-decoration: none;
+    font-style:normal;
+    border-top:1px solid rgb(165, 165, 165);
+    padding:16px 0px 0px 0px;
+    width:100%;
+    margin:0px auto;
+}
+#yesno{
+    cursor: pointer;
+}
+#yesno a{
+    font-size:16px; 
+}
+.iie{
+    border-radius:0px 0px 0px 10px;
+    border-right:1px solid rgb(165, 165, 165);
+}
+.iie a{
+    color:rgb(0, 94, 255);
+}
+.hai a{
+    color:rgb(255, 47, 0);
+}
+.iie a:hover{
+    color:rgb(0, 94, 255);
+}
+.hai a:hover{
+    color:rgb(255, 47, 0);
+}
+.hai{
+    border-radius:0px 0px 10px 0px;
+}
+
 
 @media screen and (max-width:480px) {
     .at_header{
@@ -263,6 +354,26 @@ height: calc(100% + 1px);
     }
     .artists a{
         font-size:16px;
+    }
+    .modal1{
+        width:140px;
+        height:116px;
+        top:16px;
+    }
+    .modal_title{
+        font-size:10px;
+    }
+    .modal_dis{
+        font-size:8px;
+    }
+    #yesno{
+        padding: 0px;
+    }
+    #yesno a{
+        font-size:8px; 
+    }
+    .delete_sentaku{
+        height:30px;
     }
     
 }
