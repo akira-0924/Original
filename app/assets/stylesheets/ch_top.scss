@@ -18,7 +18,7 @@
     right:0;
     bottom:0;
     background-color:black;
-    animation:top_before 6s ease forwards;
+    animation:top_before 6.4s ease forwards;
 }
 @keyframes top_before {
   0% {
@@ -160,6 +160,7 @@
     text-shadow: 2px 2px 2px #000000;
   }
   .typ span {
+    padding-bottom: 8px;
     font-family: 'Shadows Into Light', cursive;
     display: inline-block;
     color:rgba(255, 255, 255,0.9);
@@ -170,7 +171,7 @@
     font-weight: 200;
     border-right: 4px solid transparent;
     transform: translate3d(0,0,0);
-    animation: typing 3s steps(23), caret 0.3s steps(1) infinite;
+    animation: typing 3s steps(23), caret 0.3s steps(1) infinite,trans 1.4s ease 3.5s backwards;
   }
   @keyframes typing {
     from {
@@ -180,6 +181,14 @@
   @keyframes caret {
     50% {
       border-right-color: currentColor;
+    }
+  }
+  @keyframes trans {
+    0%{
+      transform: translate(0px,-100px);
+    }
+    100%{
+      transform: translate(0px,0px);
     }
   }
 
@@ -433,6 +442,9 @@
       position:relative;
       z-index:-1;
   }
+  .top_body::before{
+    height:110vh;
+}
   .top_back1,
   .top_back2,
   .top_back3,
@@ -465,6 +477,14 @@
       width: 31ch;
       font-size:30px;
       font-weight: bold;
+    }
+    @keyframes trans {
+      0%{
+        transform: translate(0px,-400px);
+      }
+      100%{
+        transform: translate(0px,0px);
+      }
     }
 
   .top_history{
