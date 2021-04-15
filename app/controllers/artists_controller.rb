@@ -15,11 +15,13 @@ class ArtistsController < ApplicationController
       elsif params[:search].present? && params[:genre]=="" && params[:or]==""
         @artists = Artist.where("at_name LIKE ? ",'%' + params[:search] + '%')
       end
+      @user = User.where(id:current_user.id)
 
     end
 
     def new
         @artist = Artist.new
+        @user = User.where(id:current_user.id)
     end
 
     def create
@@ -35,10 +37,12 @@ class ArtistsController < ApplicationController
 
     def show
         @artist = Artist.find(params[:id])
+        @user = User.where(id:current_user.id)
     end
     
     def edit
         @artist = Artist.find(params[:id])
+        @user = User.where(id:current_user.id)
     end
 
     def update
@@ -51,14 +55,12 @@ class ArtistsController < ApplicationController
       end
 
     def destroy
+        
         @artist = Artist.find(params[:id])
-        @artist.destroy
+          @artist.destroy
       end
       private
       def artist_params
         params.require(:artist).permit(:at_name, :genre, :or, :other ,:recommend ,:more,:image)
       end
-
-      
-
 end
