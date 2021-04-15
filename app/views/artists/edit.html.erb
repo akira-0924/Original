@@ -4,7 +4,9 @@
         <% @user.each do |i| %>
             <%= image_tag i.image_url,class: "icon_image", size: "50x50" if i.image? %>
             <div class="icon_modal">
-                <%= image_tag i.image_url,class: "icon_image_mo", size: "100x100" if i.image? %>
+                <%= link_to user_path(current_user.id),data: {"turbolinks" => false}, method: :get do %>
+                    <%= image_tag i.image_url,class: "icon_image_mo", size: "100x100" if i.image? %>
+                <% end %>
                 <span class="icon_dis icon_name"><%= i.name %></span>
                 <br><span class="icon_dis icon_mail"><%= i.email %></span>
                 <br><%= link_to "マイページ", user_path(current_user.id),class:"modal_show modal_show1", data: {"turbolinks" => false} %>
