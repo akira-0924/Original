@@ -5,10 +5,12 @@ class ChecksController < ApplicationController
     def index
         @checks = Check.where(user_id:current_user.id)
         @check = @checks.order(updated_at: :desc).limit(1)
+        @user = User.where(id:current_user.id)
     end
     
     def new
         @check = Check.new
+        @user = User.where(id:current_user.id)
     end
 
     def create
