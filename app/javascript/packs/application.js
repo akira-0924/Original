@@ -216,3 +216,8 @@ $(function() {
 		$(".modal1").hide();
 	});
 });
+$(function() {
+	$("#icon_c").on("click", function(){
+		$(".icon_modal").slideToggle(200);
+	});
+});
