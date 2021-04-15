@@ -1,5 +1,17 @@
 <%= stylesheet_link_tag "at_new", :media => "all" %>
 <div class="main">
+  <div class="icon" id="icon_c">
+    <% @user.each do |i| %>
+      <%= image_tag i.image_url,class: "icon_image", size: "50x50" if i.image? %>
+      <div class="icon_modal">
+        <%= image_tag i.image_url,class: "icon_image_mo", size: "100x100" if i.image? %>
+        <span class="icon_dis icon_name"><%= i.name %></span>
+        <br><span class="icon_dis icon_mail"><%= i.email %></span>
+        <br><%= link_to "マイページ", user_path(current_user.id),class:"modal_show modal_show1", data: {"turbolinks" => false} %>
+        <%= link_to "プロフィール編集", edit_user_registration_path , class: 'modal_show modal_show2', data: {"turbolinks" => false} %>
+      </div>
+    <% end %>
+  </div>
   <div class="artist_new user_content">
     <div class="new_title">
       <div class="CHECK3">
@@ -59,8 +71,8 @@
     <% end %>
     </div>
     <div class="bt-area">
-      <%= link_to "アーティスト一覧に戻る", artists_path %>
+      <%= link_to "アーティスト一覧に戻る", artists_path, data: {"turbolinks" => false} %>
     </div>
   </div>
-  <p class="at_start">POST</p>
+  <p class="at_start at_start_post">POST</p>
 </div>
