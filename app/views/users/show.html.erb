@@ -18,7 +18,7 @@
           <p>Profile : <%= @user.profile %></p>
           <% if current_user.id == @user.id %>
           <div class="bt-area">
-            <%= link_to "edit", edit_user_registration_path , class: 'btn'%>
+            <%= link_to "edit", edit_user_registration_path , class: 'btn', data: {"turbolinks" => false} %>
           </div>
           <% end %>
         </div>
@@ -57,7 +57,7 @@
         <% end %>
       </div>
       <div class="bt-area">
-        <%= link_to "アーティスト一覧に戻る", artists_path,{class: "link_to"} %>
+        <%= link_to "アーティスト一覧に戻る", artists_path,{class: "link_to",data:{"turbolinks" => false}} %>
       </div>
     </div>
   </div>
