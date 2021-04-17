@@ -51,14 +51,14 @@
     font-size:15px;
     margin-top:100px;
     transform: translate3d(0,0,0);
-    animation: top_des 7.5s ease normal;
+    animation: top_des 9s ease normal;
     text-shadow: 2px 2px 2px #262626;
 }
 @keyframes top_des {
     0% {
       -webkit-opacity: 0;
     }
-    70% {
+    60% {
       -webkit-opacity: 0;
     }
     100% { 
@@ -83,7 +83,7 @@
 
 .top_icon{
     text-align:center;
-    animation: top_icon 7.5s ease ;
+    animation: top_icon 9s ease ;
     animation-direction: normal;
     display: inline-block;
 }
