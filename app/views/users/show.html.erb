@@ -25,7 +25,7 @@
       </div>
       <h2>診断一覧</h2>
       <div class="artists-container">
-        <% @checks.each do |t| %>
+        <% @checks.select(:result_id).distincteach do |t| %>
           <div class="artists myartists">
             <%= link_to result_path(t.result.id), method: :get do %>
               <%= image_tag t.result.image_url,class:"user_show", size: "150pxx150px" if t.result.image? %>
