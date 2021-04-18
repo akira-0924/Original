@@ -39,9 +39,11 @@
           <div class="artists" id="destroy_artist<%= t.id %>">
             <div class="allimages butoon mouse">
               <%= link_to artist_path(t.id), method: :get do %>
-                <i class="load_anime">
+                <div class="load_imageout">
+                <i class="load_anime abc">
                   <span class="outborder"><%= image_tag t.image_url,class: "images", size: "270x270" if t.image? %></span>
                 </i>
+                </div>
               <% end %>
             </div>
             <i id="likes_buttons<%= t.id %>">
