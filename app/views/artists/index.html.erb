@@ -25,7 +25,7 @@
         <div class="search_content">
           <%= form_tag({controller:"artists",action:"index"}, method: :get) do %>
               <span class="search_ge">genre　</span>
-             <%= select_tag "genre", options_for_select([["All", ""],["ポップス", "ポップス"],["ロック","ロック"],["ヒップホップ", "ヒップホップ"],["ジャズ","ジャズ"],["レゲエ", "レゲエ"],["クラシック","クラシック"],["ブルース", "ブルース"],["EDM","EDM"],["エレクトロニカ", "エレクトロニカ"],["ファンク","ファンク"],["メタル", "メタル"],["フォーク","フォーク"],["インスト", "インスト"],["R&B","R&B"]]),class:"search_genre" %>
+             <%= select_tag "genre", options_for_select([["All", ""],["ポップス", "ポップス"],["ロック","ロック"],["ヒップホップ", "ヒップホップ"],["ジャズ","ジャズ"],["レゲエ", "レゲエ"],["クラシック","クラシック"],["ブルース", "ブルース"],["EDM","EDM"],["エレクトロニカ", "エレクトロニカ"],["ファンク","ファンク"],["メタル", "メタル"],["フォーク","フォーク"],["インスト", "インスト"],["R&B","R&B"],["その他","その他"]]),class:"search_genre" %>
                 <br><span class="search_ge">洋or邦　</span>
                 <%= select_tag "or", options_for_select([["All", ""],["邦楽", "邦楽"],["洋楽","洋楽"]]) %>
                 <br><%= text_field_tag :search ,"",{class:'search_field',value: params[:search] } %>
@@ -39,7 +39,9 @@
           <div class="artists" id="destroy_artist<%= t.id %>">
             <div class="allimages butoon mouse">
               <%= link_to artist_path(t.id), method: :get do %>
-                <span class="outborder"><%= image_tag t.image_url,class: "images", size: "270x270" if t.image? %></span>
+                <i class="load_anime">
+                  <span class="outborder"><%= image_tag t.image_url,class: "images", size: "270x270" if t.image? %></span>
+                </i>
               <% end %>
             </div>
             <i id="likes_buttons<%= t.id %>">
