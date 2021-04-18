@@ -10,6 +10,7 @@
     position:relative;
     z-index:-2;
 }
+
 .main::before{
     content: ' ';
     width:100%;
@@ -77,6 +78,81 @@
     opacity: 0.7;
     transition: all ease 0.4s;
 }
+.load_imageout::after,
+.load_imageout::before,
+.load_anime::after,
+.load_anime::before {
+    content: '';
+    display: block;
+    width:50%;
+    height:50%;
+    position: absolute;
+    z-index:10;
+    background-color:rgb(33, 33, 33);
+}
+.load_anime::before{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    animation: load_anime_image1 0.7s cubic-bezier(0.79,0.14,0.15,0.86) both 0.3s;
+}
+.load_anime::after{
+    left:0;
+    bottom:0;
+    animation: load_anime_image2 0.7s cubic-bezier(0.79,0.14,0.15,0.86) both 0.3s;
+}
+.load_imageout::after{
+    right:0;
+    bottom:0;
+    animation: load_anime_image3 0.7s cubic-bezier(0.79,0.14,0.15,0.86) both 0.3s;
+}
+.load_imageout::before{
+    right:0;
+    top:0;
+    animation: load_anime_image4 0.7s cubic-bezier(0.79,0.14,0.15,0.86) both 0.3s;
+}
+
+@keyframes load_anime_image1 {
+    0%{
+        transform-origin: left;
+        transform:scaleX(1);
+    }
+    100%{
+        transform-origin: left;
+        transform:scaleX(0);
+    }
+}
+@keyframes load_anime_image2 {
+    0%{
+        transform-origin: bottom;
+        transform:scaleY(1);
+    }
+    100%{
+        transform-origin: bottom;
+        transform:scaleY(0);
+    }
+}
+@keyframes load_anime_image3 {
+    0%{
+        transform-origin: right;
+        transform:scaleX(1);
+    }
+    100%{
+        transform-origin: right;
+        transform:scaleX(0);
+    }
+}
+@keyframes load_anime_image4 {
+    0%{
+        transform-origin: top;
+        transform:scaleY(1);
+    }
+    100%{
+        transform-origin: top;
+        transform:scaleY(0);
+    }
+}
 
 .button{
     border: 10px solid rgb(8, 215, 94);
@@ -89,30 +165,6 @@
     position:relative;
     z-index: 1;
   }
-.load_anime::before{
-    content: '';
-    display: block;
-    width:100%;
-    height:100%;
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index:100;
-    background-color: rgb(52, 48, 48);
-    animation: load_anime_image 0.7s cubic-bezier(1,0,0,1) both 0.2s;
-}
-@keyframes load_anime_image {
-    0%{
-        transform-origin: right;
-        transform:scaleX(1);
-    }
-    100%{
-        transform-origin: right;
-        transform:scaleX(0);
-    }
-}
 
 .allimages::after,
 .allimages::before,
