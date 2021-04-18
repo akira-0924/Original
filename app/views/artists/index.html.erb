@@ -49,10 +49,10 @@
             <i id="likes_buttons<%= t.id %>">
               <%= render partial: 'likes/like', locals: { tt: t} %>
             </i>
-              <%= link_to t.at_name, artist_path(t.id) %>
+              <%= link_to t.at_name, artist_path(t.id),class:"at_edit" %>
               <% if user_signed_in? && current_user.id == t.user_id %>
-                <%= link_to "編集", edit_artist_path(t.id) %>
-                <br><i class="delete_button" id="delete_button1<%= t.id %>">削除</i>
+                <br><%= link_to "編集", edit_artist_path(t.id) ,class:"at_edit1" %>
+                <a half=# class="delete_button" id="delete_button1<%= t.id %>">削除</a>
                 <div class="modal1">
                   <div class="modal_content">
                     <span class="modal_title">投稿を削除</span>
