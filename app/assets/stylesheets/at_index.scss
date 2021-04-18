@@ -3,7 +3,7 @@
     min-height:100vh;
     height:100%;
     background-color: rgba(0, 0, 0, 0.5);
-    background-image: url("../images/mainback1.jpg");
+    background-image: url("../images/re12.jpg");
     background-size:cover;
     background-blend-mode:darken;
     padding-bottom:50px;
@@ -21,7 +21,7 @@
     left:0;
     right: 0;
     bottom: 0;
-    background-color: rgba(75, 75, 75, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
 .main-container{
@@ -46,7 +46,7 @@
     width:80%;
     margin:20px auto;
     border-radius: 20px;
-    background-color: rgba(232, 232, 232, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
     display: flex;
     flex-wrap: wrap;
 }
@@ -178,12 +178,12 @@
   transition: all .3s ease;
   -webkit-transition: all .4s ease;
   border-radius:10px;
+  background-color: rgb(255, 255, 255);
 }
 /* 右下へ配置 */
 .allimages::after {
   width: 0;
   height: 2px;
-  background-color: rgb(255, 255, 255);
   right:0;
   bottom:0px;
   
@@ -192,7 +192,6 @@
 .allimages::before {
   width: 0px;
   height: 2px;
-  background-color: rgb(255, 255, 255);
   left:1px;
   top:-1px;
   }
@@ -200,7 +199,6 @@
 .outborder::after {
   width: 2px;
   height: 0px;
-  background-color: rgb(255, 255, 255);
   left:0px;
   bottom:0px;
   
@@ -209,7 +207,6 @@
 .outborder::before {
   width: 2px;
   height: 0px;
-  background-color:rgb(255, 255, 255);
   right:-1px;
   top:-1px;
 }
@@ -258,7 +255,7 @@ height: calc(100% + 1px);
     width:20%;
     margin: 0 auto;
     min-width:15em;
-    background-color: rgba(167, 167, 167, 0.6);
+    background-color: rgba(167, 167, 167, 0.8);
     border-radius: 10px;
     padding:10px 0px 10px 60px;
 }
