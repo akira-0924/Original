@@ -64,7 +64,6 @@
     color:rgb(0, 0, 0);
     font-family: 'Noto Serif JP', serif;
     font-family: 'Shadows Into Light', cursive;
-    font-size:20px;
 }
 
 .artists a:hover{
@@ -333,12 +332,26 @@ height: calc(100% + 1px);
     font-style:normal;
     font-size:14px;
 }
-.delete_button{
-    border:1px solid rgb(63, 63, 63);
-    padding:2px;
+.at_edit{
+    font-size:20px;
+}
+.at_edit1{
+    font-size: 15px;
     border-radius:3px;
     background-color:rgb(230, 230, 230);
     cursor: pointer;
+    border:1px solid rgb(63, 63, 63);
+    padding:0px 2px;
+}
+.delete_button{
+    border:1px solid rgb(63, 63, 63);
+    padding:0px 2px;
+    border-radius:3px;
+    background-color:rgb(230, 230, 230);
+    cursor: pointer;
+    font-style:normal;
+    font-weight:initial;
+    font-size:15px;
 }
 
 .delete_sentaku{
