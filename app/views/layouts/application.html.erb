@@ -24,31 +24,32 @@
   <header>
     <p>menu</p>
     <div class="drawer">
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
       <input type="checkbox" id="drawer-check" class="drawer-hidden" >
       <label for="drawer-check" class="drawer-open"><span></span></label>
         <nav class="drawer-content">
           <ul class="drawer-list">
-            <li class="drawer-item dr0">
+            <li class="drawer-item dr0" id="DR0">
               <%= link_to "アーティスト一覧", artists_path, data: {"turbolinks" => false} %>
             </li>
-            <li class="drawer-item dr1">
+            <li class="drawer-item dr1" id="DR1">
               <%= link_to "投稿する", new_artist_path, data: {"turbolinks" => false} %>
             </li>
-            <li class="drawer-item dr2">
+            <li class="drawer-item dr2" id="DR2">
             <% if user_signed_in? %>
               <%= link_to "マイページ", user_path(current_user.id), data: {"turbolinks" => false} %>
               <% end %>
             </li>
-            <li class="drawer-item dr3">
+            <li class="drawer-item dr3" id="DR3">
               <%= link_to "トップページ", top_path, data: {"turbolinks" => false} %>
             </li>
-            <li class="drawer-item dr4">
+            <li class="drawer-item dr4" id="DR4">
               <%= link_to "診断する", new_check_path, data: {"turbolinks" => false}%>
             </li>
-            <li class="drawer-item dr5">
+            <li class="drawer-item dr5" id="DR5">
               <%= link_to "新規登録", new_user_registration_path, data: {"turbolinks" => false} %>
             </li>
-            <li class="drawer-item dr6">
+            <li class="drawer-item dr6" id="DR6">
               <% if user_signed_in? %>
                 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {"turbolinks" => false}%>
               <% else %>
