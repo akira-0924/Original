@@ -3,6 +3,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
@@ -46,16 +47,16 @@ $(function() {
 
 
 
-	var typeANum = $(".typeA:checked").length,
-		typeBNum = $(".typeB:checked").length,
-        typeCNum = $(".typeC:checked").length,
-		typeDNum = $(".typeD:checked").length,
-		typeENum = $(".typeE:checked").length,
-		typeFNum = $(".typeF:checked").length,
-		typeGNum = $(".typeG:checked").length,
-		typeHNum = $(".typeH:checked").length,
-		typeINum = $(".typeI:checked").length,
-		typeJNum = $(".typeJ:checked").length;
+	var typeANum = $("#typea:checked").length,
+		typeBNum = $("#typeb:checked").length,
+        typeCNum = $("#typec:checked").length,
+		typeDNum = $("#typed:checked").length,
+		typeENum = $("#typee:checked").length,
+		typeFNum = $("#typef:checked").length,
+		typeGNum = $("#typeg:checked").length,
+		typeHNum = $("#typeh:checked").length,
+		typeINum = $("#typei:checked").length,
+		typeJNum = $("#typej:checked").length;
         
       if(typeANum > 0){
         $("#Q_02A").fadeIn();
@@ -82,71 +83,22 @@ $(function() {
 });
 
 $(function() {
-	$(".result_view").on("click", function(){
-
-	  var type1Num = $(".type1:checked").length,
-		  type2Num = $(".type2:checked").length,
-		  type3Num = $(".type3:checked").length,
-		  type4Num = $(".type4:checked").length,
-		  type5Num = $(".type5:checked").length,
-		  type6Num = $(".type6:checked").length,
-		  type7Num = $(".type7:checked").length,
-		  type8Num = $(".type8:checked").length;
-
-		  if(type1Num >0 && type5Num >0 && type7Num >0){
-			$(".Result1").fadeIn();
-		  }else if(type1Num >0 && type5Num >0 && type8Num >0){
-			$(".Result2").fadeIn();
-		  }else if(type1Num >0 && type6Num >0 && type7Num >0){
-			$(".Result3").fadeIn();
-		  }else if(type1Num >0 && type6Num >0 && type8Num >0){
-			$(".Result4").fadeIn();
-		  }else if(type2Num >0 && type5Num >0 && type7Num >0){
-			$(".Result5").fadeIn();
-		  }else if(type2Num >0 && type5Num >0 && type8Num >0){
-			$(".Result6").fadeIn();
-		  }else if(type2Num >0 && type6Num >0 && type7Num >0){
-			$(".Result7").fadeIn();
-		  }else if(type2Num >0 && type6Num >0 && type8Num >0){
-			$(".Result8").fadeIn();
-		  }else if(type3Num >0 && type5Num >0 && type7Num >0){
-			$(".Result9").fadeIn();
-		  }else if(type3Num >0 && type5Num >0 && type8Num >0){
-			$(".Result10").fadeIn();
-		  }else if(type3Num >0 && type6Num >0 && type7Num >0){
-			$(".Result11").fadeIn();
-		  }else if(type3Num >0 && type6Num >0 && type8Num >0){
-			$(".Result12").fadeIn();
-		  }else if(type4Num >0 && type5Num >0 && type7Num >0){
-			$(".Result13").fadeIn();
-		  }else if(type4Num >0 && type5Num >0 && type8Num >0){
-			$(".Result14").fadeIn();
-		  }else if(type4Num >0 && type6Num >0 && type7Num >0){
-			$(".Result15").fadeIn();
-		  }else if(type4Num >0 && type6Num >0 && type8Num >0){
-			$(".Result16").fadeIn();
-		  }
-
-	});
-});
-
-$(function() {
 	$(".wizard > .actions a[href='#finish']").on("click", function(){
  
-	 var  type5 = $(".type5:checked").length,
-		  type6 = $(".type6:checked").length,
-		  type7 = $(".type7:checked").length,
-		  type8 = $(".type8:checked").length;
+	 var  type5 = $("#TYPE5:checked").length,
+		  type6 = $("#TYPE6:checked").length,
+		  type7 = $("#TYPE7:checked").length,
+		  type8 = $("#TYPE8:checked").length;
 
 		if(type5 >0 || type6 >0 && type7 >0 || type8 >0){
-			$(".sindan_view").fadeIn();
+			$("#sindan_display").fadeIn();
 		}
 	});
 });
 
 $(function() {
-	$(".sindan_view").on("click", function(){
-			$(".sindan_view").fadeOut();
+	$("#sindan_display").on("click", function(){
+			$("#sindan_display").fadeOut();
 	});
 });
 
@@ -181,17 +133,13 @@ $(function() {
 $(window).on('load scroll', function (){
 
 	var box = $('.fadeIn');
-	var animated = 'animated';
 	
 	box.each(function(){
-	
 	  var boxOffset = $(this).offset().top;
 	  var scrollPos = $(window).scrollTop();
 	  var wh = $(window).height();
-  
-	  //画面内のどの位置で処理を実行するかで「100」の値を変更
 	  if(scrollPos > boxOffset - wh + 100 ){
-		$(this).addClass(animated);
+		$(this).addClass("animated");
 	  }
 	});
   
@@ -199,15 +147,16 @@ $(window).on('load scroll', function (){
 
 $(function() {
 	$("#drawer-check").on("click", function(){
-			$(".dr0").toggleClass('drawer-item0');
-			$(".dr1").toggleClass('drawer-item1');
-			$(".dr2").toggleClass('drawer-item2');
-			$(".dr3").toggleClass('drawer-item3');
-			$(".dr4").toggleClass('drawer-item4');
-			$(".dr5").toggleClass('drawer-item5');
-			$(".dr6").toggleClass('drawer-item6');
+			$("#DR0").toggleClass('drawer-item0');
+			$("#DR1").toggleClass('drawer-item1');
+			$("#DR2").toggleClass('drawer-item2');
+			$("#DR3").toggleClass('drawer-item3');
+			$("#DR4").toggleClass('drawer-item4');
+			$("#DR5").toggleClass('drawer-item5');
+			$("#DR6").toggleClass('drawer-item6');
 	});
 });
+
 $(function() {
 	$(".delete_button").on("click", function(){
 			$(this).nextAll(".modal1").fadeIn();
@@ -221,3 +170,15 @@ $(function() {
 		$(".icon_modal").slideToggle(200);
 	});
 });
+
+$(function(){
+	$('.YouTube').each(function() {
+	  var iframe = $(this).children('iframe');
+	  var url = iframe.attr('data-src');
+	  var id = url.match(/[\/?=]([a-zA-Z0-9_-]{11})[&\?]?/)[1];
+	  iframe.before('<img src="http://img.youtube.com/vi/'+id+'/mqdefault.jpg" />').remove();
+	  $(this).on('click', function() {
+		$(this).after('<div class="YouTube"><iframe src="https://www.youtube.com/embed/'+id+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>').remove();
+	  });
+	});
+  });
