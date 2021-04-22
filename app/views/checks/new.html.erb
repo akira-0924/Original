@@ -1,94 +1,108 @@
-<div class="main user_content">   
+<div class="main user_content">  
+<div class="icon" id="icon_c">
+    <% @user.each do |i| %>
+      <%= image_tag i.image_url,class: "icon_image", size: "50x50" if i.image? %>
+      <div class="icon_modal">
+        <%= link_to user_path(current_user.id),data: {"turbolinks" => false}, method: :get do %>
+          <%= image_tag i.image_url,class: "icon_image_mo", size: "100x100" if i.image? %>
+        <% end %>
+        <span class="icon_dis icon_name"><%= i.name %></span>
+        <br><span class="icon_dis icon_mail"><%= i.email %></span>
+        <br><%= link_to "マイページ", user_path(current_user.id),class:"modal_show modal_show1", data: {"turbolinks" => false} %>
+        <%= link_to "プロフィール編集", edit_user_registration_path , class: 'modal_show modal_show2' , data: {"turbolinks" => false} %>
+      </div>
+    <% end %>
+  </div> 
   <%= form_for @check do |f| %>
     <div id="wizard" class="check_new">
         <h1>Q1</h1>
         <section  class="q_all1" id="Q_content">
             <p class="q_title">I.好きなアーティストを選んでください</p>
-            <input type="radio" name="q1" class="typeA" /><label class="label1">あいみょん</label></br>
-            <input type="radio" name="q1" class="typeB" /><label class="label1">Official髭男dism</label></br>
-            <input type="radio" name="q1" class="typeC" /><label class="label1">米津玄師</label></br>
-            <input type="radio" name="q1" class="typeD" /><label class="label1">King Gnu</label></br>
-            <input type="radio" name="q1" class="typeE" /><label class="label1">星野源</label></br>
-            <input type="radio" name="q1" class="typeF" /><label class="label1">RADWIMPS</label></br>
-            <input type="radio" name="q1" class="typeG" /><label class="label1">ONE OK ROCK</label></br>
-            <input type="radio" name="q1" class="typeH" /><label class="label1">Mrs. GREEN APPLE</label></br>
-            <input type="radio" name="q1" class="typeI" /><label class="label1">乃木坂46</label></br>
-            <input type="radio" name="q1" class="typeJ" /><label class="label1">嵐</label></br>
+            <input type="radio" name="q1" class="typeA" id="typea" /><label class="label1">あいみょん</label></br>
+            <input type="radio" name="q1" class="typeB" id="typeb" /><label class="label1">Official髭男dism</label></br>
+            <input type="radio" name="q1" class="typeC" id="typec"  /><label class="label1">米津玄師</label></br>
+            <input type="radio" name="q1" class="typeD" id="typed"  /><label class="label1">King Gnu</label></br>
+            <input type="radio" name="q1" class="typeE" id="typee"  /><label class="label1">星野源</label></br>
+            <input type="radio" name="q1" class="typeF" id="typef"  /><label class="label1">RADWIMPS</label></br>
+            <input type="radio" name="q1" class="typeG" id="typeg"  /><label class="label1">ONE OK ROCK</label></br>
+            <input type="radio" name="q1" class="typeH" id="typeh"  /><label class="label1">Mrs. GREEN APPLE</label></br>
+            <input type="radio" name="q1" class="typeI" id="typei"  /><label class="label1">乃木坂46</label></br>
+            <input type="radio" name="q1" class="typeJ" id="typej"  /><label class="label1">嵐</label></br>
         </section>
         <h1>Q2</h1>
         <section class="q_all2">
             <p class="q_title">II.1番好きな曲を選択してください</p>
                 <div class="Q2_branch" id="Q_02A">
-                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu" %> 夢追いベンガル </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu" %> 生きていたんだよな </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu" %> マリーゴールド </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu" %> 愛を伝えたいだとか </label>
+                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> 夢追いベンガル </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> 生きていたんだよな </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu",id:"type3" %> マリーゴールド </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu",id:"type4" %> 愛を伝えたいだとか </label>
                 </div>
                 <div class="Q2_branch" id="Q_02B">
-                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu" %> FIRE GROUND </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu" %> LADY </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu" %> Pretender </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu" %> Stand By You </label>
+                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> FIRE GROUND </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> LADY </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu",id:"type3" %> Pretender </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu",id:"type4" %> Stand By You </label>
                 </div>
                 <div class="Q2_branch" id="Q_02C">
-                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu" %> LOSER </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu" %> サンタマリア </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu" %> 感電 </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu" %> Flamingou </label>
+                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> LOSER </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> サンタマリア </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu",id:"type3" %> 感電 </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu",id:"type4" %> Flamingou </label>
                 </div>
                 <div class="Q2_branch" id="Q_02D">
-                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu" %> Flash!!! </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu" %> Vinyl </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu" %> Teenager Forever </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu" %> Slumberland </label>
+                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> Flash!!! </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> Vinyl </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu",id:"type3" %> Teenager Forever </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu",id:"type4" %> Slumberland </label>
                 </div>
                 <div class="Q2_branch" id="Q_02E">
-                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu" %> アイデア </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu" %> Creazy Creazy </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu" %> 夢の外へ </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu" %> Same Thing </label>
+                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> アイデア </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> Creazy Creazy </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu",id:"type3" %> 夢の外へ </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu",id:"type4" %> Same Thing </label>
                 </div>
                 <div class="Q2_branch" id="Q_02F">
-                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu" %> 会心の一撃 </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu" %> そっけない </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu" %> ふたりごと </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu" %> 実況中継 </label>
+                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> 会心の一撃 </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> そっけない </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu",id:"type3" %> ふたりごと </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu",id:"type4" %> 実況中継 </label>
                 </div>
                 <div class="Q2_branch" id="Q_02G">
-                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu" %> 完全感覚DreamerWe are </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu" %> Wherever you are </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu" %> Change </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu" %> 欲望に満ちた青年団 </label>
+                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> 完全感覚Dreamer</label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> Wherever you are </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu",id:"type3" %> Change </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu",id:"type4" %> 欲望に満ちた青年団 </label>
                 </div>
                 <div class="Q2_branch" id="Q_02H">
-                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu" %> パブリック </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu" %> ロマンチシズム </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu" %> StaRt </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu" %> NO.7 </label>
+                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> パブリック </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> ロマンチシズム </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu",id:"type3" %> StaRt </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu",id:"type4" %> NO.7 </label>
                 </div>
                 <div class="Q2_branch" id="Q_02I">
-                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu" %> ジコチューでいこう! </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu" %> 雲になればいい </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu" %> I see... </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu" %> Sing Out! </label>
+                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> ジコチューでいこう! </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> 雲になればいい </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu",id:"type3" %> I see... </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu",id:"type4" %> Sing Out! </label>
                 </div>
                 <div class="Q2_branch" id="Q_02J">
-                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu" %> PIKA☆NCHI </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu" %> 明日の記憶 </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu" %> Monster </label>
-                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu" %> A・RA・SHI </label>
+                    <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> PIKA☆NCHI </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> 明日の記憶 </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択3",class:"Q2_mu",id:"type3" %> Monster </label>
+                    <br><label class="label2"><%= f.radio_button :q2, "選択4",class:"Q2_mu",id:"type4" %> A・RA・SHI </label>
                 </div>
             </section>
             <h1>Q3</h1>
             <section class="q_all3">
                 <p class="q_title">III.どちらか合う方を選択してください</p>
-                <label class="label1 q2_top"><%= f.radio_button :q3, "選択5",class:"type5 type56" %> バラードが好きだ </label>
-                <br><label class="label1"><%= f.radio_button :q3, "選択6",class:"type6 type56" %> アップテンポが好きだ </label>
+                <label class="label1 q2_top"><%= f.radio_button :q3, "選択5",class:"type5 type56" ,id:"TYPE5" %> バラードが好きだ </label>
+                <br><label class="label1"><%= f.radio_button :q3, "選択6",class:"type6 type56" ,id:"TYPE6" %> アップテンポが好きだ </label>
                 <p class="q34_divide"></p>
-                <label class="label1"><%= f.radio_button :q4, "選択7",class:"type7 type78" %> 歌詞で曲を好きになることが多い </label>
-                <br><label class="label1"><%= f.radio_button :q4, "選択8",class:"type8 type78" %> 曲調、リズムで曲を好きになることが多い </label>
+                <label class="label1"><%= f.radio_button :q4, "選択7",class:"type7 type78" ,id:"TYPE7" %> 歌詞で曲を好きになることが多い </label>
+                <br><label class="label1"><%= f.radio_button :q4, "選択8",class:"type8 type78" ,id:"TYPE8" %> 曲調、リズムで曲を好きになることが多い </label>
             </section>
-            <%= f.submit "診断結果を表示" , class: 'sindan_view' %>
+            <%= f.submit "診断結果を表示" , class: 'sindan_view',id:"sindan_display" %>
         <% end %>
     </div>
     <p class="check_start">CHECK</p>
