@@ -36,11 +36,11 @@
         </div>
       <div class="artists-container">
         <% @artists.each do |t| %>
-          <div class="artists" id="destroy_artist<%= t.id %>">
+          <div class="artists post_updown" id="destroy_artist<%= t.id %>">
             <div class="allimages butoon mouse">
               <%= link_to artist_path(t.id), method: :get do %>
-                <div class="load_imageout">
-                <i class="load_anime abc">
+                <div class="def">
+                <i class=" abc">
                   <span class="outborder"><%= image_tag t.image_url,class: "images", size: "270x270" if t.image? %></span>
                 </i>
                 </div>
