@@ -182,3 +182,17 @@ $(function(){
 	  });
 	});
   });
+  $(function () {
+	    $(window).scroll(function () {
+	        const wHeight = $(window).height();
+	        const scrollAmount = $(window).scrollTop();
+	        $('.artists').each(function () {
+	            const targetPosition = $(this).offset().top;
+	            if(scrollAmount > targetPosition - wHeight + 60) {
+	                $(this).addClass("post_fade");
+					$(this).find(".abc").addClass("load_imageout");
+					$(this).find(".def").addClass("load_anime");
+	            }
+	        });
+	    });
+	});
