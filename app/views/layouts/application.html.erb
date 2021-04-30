@@ -6,28 +6,42 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link rel="stylesheet" href="stylesheets/jquery.steps.scss">
-    <link rel="stylesheet" href="stylesheets/main.scss">
-    <link rel="stylesheet" href="stylesheets/normalize.scss">
+    <link rel="stylesheet" rel="preload" href="stylesheets/jquery.steps.scss" as="style">
+    <link rel="stylesheet" rel="preload" href="stylesheets/main.scss" as="style">
+    <link rel="stylesheet" rel="preload" href="stylesheets/normalize.scss" as="style">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <script>
+window.WebFontConfig = {
+  google: { families: ['Caveat:wght@700','Noto+Sans+JP:wght@300'] },
+  active: function() {
+    sessionStorage.fonts = true;
+  }
+};
+(function() {
+  var wf = document.createElement('script');
+  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+})();
+</script>
   </head>
   <body>
   <header>
+  <div class="header_main"></div>
     <p>menu</p>
     <div class="drawer">
         <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
       <input type="checkbox" id="drawer-check" class="drawer-hidden" >
       <label for="drawer-check" class="drawer-open"><span></span></label>
         <nav class="drawer-content">
+        <h1 class="logo">IntRock</h1>
           <ul class="drawer-list">
             <li class="drawer-item dr0" id="DR0">
               <%= link_to "アーティスト一覧", artists_path, data: {"turbolinks" => false} %>
@@ -60,9 +74,27 @@
         </nav>
     </div>
   </header>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <%= yield %>
     </body>
     <footer>
+      <div class="fot_logo"><span>IntRock</span><br>あなたに合ったロックバンドを。</div>
+      <div class="fot_select">
+      <%= link_to "アーティスト一覧", artists_path, class:"fot_select1", data: {"turbolinks" => false} %>
+      <br><%= link_to "投稿する", new_artist_path, class:"fot_select1", data: {"turbolinks" => false} %>
+      <br><%= link_to "診断する", new_check_path, class:"fot_select1", data: {"turbolinks" => false}%>
+      </div>
+      <div class="share">
+        <span>SHARE.</span>
+        <%= link_to  "https://twitter.com/share?url=https://rockintroduction.herokuapp.com/&text=ロック診断をする", title: 'Twitter', target: '_blank'  do %>
+        <i class="fab fa-twitter fa-3x"></i>
+        <% end %>
+        <%= link_to "https://instagram.com/akira__0924?url=#{request.url}/&text=ロック診断をする", title: 'Instagram', target: '_blank'  do %>
+        <i class="fab fa-instagram fa-3x"></i>
+        <% end %>
+      </div>
+      <div class="copyright">
       Copyright © 2021 Akira Mizushima.
+      </div>
     </footer>
 </html>
