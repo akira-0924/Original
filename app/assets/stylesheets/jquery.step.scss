@@ -77,12 +77,13 @@
 .wizard > .steps .number
 {
     font-size: 1.429em;
-    display:none;
+    display: none;
 }
 
 .wizard > .steps > ul > li
 {
     width: 25%;
+    font-size:20px;
 }
 
 .wizard > .steps > ul > li,
@@ -135,14 +136,6 @@
 .wizard > .steps .done a:active
 {
     background: #98ac97;
-    color: #fff;
-}
-
-.wizard > .steps .error a,
-.wizard > .steps .error a:hover,
-.wizard > .steps .error a:active
-{
-    background: #ff3111;
     color: #fff;
 }
 
@@ -210,25 +203,10 @@
 {
     display: inline-block;
 }
-
-.wizard > .content > .body input.error
-{
-    background: rgb(251, 227, 228);
-    border: 1px solid #fbc2c4;
-    color: #8a1f11;
-}
-
 .wizard > .content > .body label
 {
     display: inline-block;
     margin-bottom: 0.5em;
-}
-
-.wizard > .content > .body label.error
-{
-    color: #8a1f11;
-    display: inline-block;
-    margin-left: 1.5em;
 }
 
 .wizard > .actions
@@ -433,28 +411,10 @@
     min-width:400px;
 }
 
-.result h2{
-    text-align:left;
-    padding-bottom:30px;
-}
-
 .result_img{
     border:1px solid rgb(126, 126, 126);
     border-radius:10px;
     margin-top:15px;
-}
-
-.result_view{
-    background-color:rgba(67, 67, 67, 0.6);
-    padding:10px 75px;
-    border-radius:5px;
-    color:white;
-    cursor: pointer;
-    display:none;
-    position:absolute;
-    right:15vw;
-    bottom:30px;
-
 }
 
 .result_view:hover{
@@ -508,7 +468,7 @@
 }
 
 .rock_lab{
-    font-size:24px;
+    font-size:44px;
 }
 
 .wizard > .actions a[href="#next"],
@@ -572,7 +532,6 @@
     overflow: hidden;
     white-space:nowrap;
     color:white;
-    font-family: 'Shadows Into Light', cursive;
     font-size:50px;
     text-shadow: 2px 2px 2px #000000;
     animation: typing 0.8s steps(8),check_st2 2.2s ease;
@@ -595,6 +554,27 @@
         opacity: 0;
         visibility: hidden;
     }
+}
+
+.check_share{
+    width:40%;
+    height:100%;
+    margin:5px auto;
+    border-radius: 10px;
+}
+.sh_span{
+    width:auto;
+    display: inline-block;
+    font-size:32px;
+    text-decoration: none;
+    color: black;
+    margin-bottom:30px;
+}
+.chack_share a{
+    text-decoration: none;
+}
+.tweet_title{
+    margin-top:40px;
 }
 
 
@@ -653,6 +633,6 @@
 
     .mu_br{
         width:90%;
-        min-width: 90%;
+        min-width:90%;
     }
 }
