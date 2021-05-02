@@ -2,10 +2,18 @@
 <div class="main">
   <div class="icon" id="icon_c">
     <% @user.each do |i| %>
-      <%= image_tag i.image_url,class: "icon_image", size: "50x50" if i.image? %>
+      <% if i.image.present? %>
+            <%= image_tag i.image_url,class: "icon_image", size: "50x50" if i.image? %>
+          <% else %>
+            <%= image_tag '/images/icon.jpg',class: "icon_image", size: "50x50" %></br>
+          <% end %>
       <div class="icon_modal">
         <%= link_to user_path(current_user.id),data: {"turbolinks" => false}, method: :get do %>
-          <%= image_tag i.image_url,class: "icon_image_mo", size: "100x100" if i.image? %>
+          <% if i.image.present? %>
+            <%= image_tag i.image_url,class: "icon_image_mo", size: "100x100" if i.image? %>
+          <% else %>
+            <%= image_tag '/images/icon.jpg',class: "icon_image_mo", size: "80x80" %></br>
+          <% end %>
         <% end %>
         <span class="icon_dis icon_name"><%= i.name %></span>
         <br><span class="icon_dis icon_mail"><%= i.email %></span>
@@ -68,8 +76,10 @@
           <div class="new_detail">
             <li><%= f.label :画像 %></li>
             <label>
-            <div class="post_preview" id="POST_PREVIEW"></div>
-            <li><%= f.file_field :image , class: 'new_text img_post', id:"post_pre" %></li>
+              <div class="post_preview" id="POST_PREVIEW"><i class="fas fa-camera fa-2x"></i></div>
+              <li><%= f.file_field :image , class: 'new_text img_post', id:"post_pre" %></li>
+              <span class="post_edit">※クリックで変更できます</span>
+            </label>
           </div>
       </ul>
         <%= f.submit "投稿する" , class: 'submit-btn' %>
