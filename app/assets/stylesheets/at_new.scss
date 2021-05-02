@@ -1,13 +1,13 @@
 .new_field{
     width:50%;
-    background-color:rgba(255, 255, 255, 0.6);
+    background-color:rgba(255, 255, 255, 0.8);
     margin:0px auto;
     text-align:center;
     border-radius:30px;
     padding:20px 0px;
     margin-bottom:55px;
     overflow: hidden;
-    min-width:450px;
+    min-width:28em;
 }
 
 .new_title{
@@ -50,7 +50,6 @@
 .new_detail{
     font-size:25px;
     margin-top:15px;
-    font-family: 'Noto Serif JP', serif;
     margin-right: 40px;
 }
 
@@ -59,6 +58,9 @@
     padding:4px 0px;
     width:80%;
     margin-right: 40px;
+}
+.img_post{
+    display: none;
 }
 
 .artist_new{
@@ -82,7 +84,6 @@
     animation: CHECK3 3.8s 1 0.6s;
     font-size:34px;
     color:rgba(255, 255, 255,0.9);
-    font-family: 'Shadows Into Light', cursive;
 }
   @keyframes CHECK3 {
     0% {
@@ -92,7 +93,51 @@
       transform: rotateX(0);
     }
   }
-
+.post_preview{
+    width:270px;
+    height:270px;
+    background-color: rgb(255, 255, 255);
+    margin:0 auto;
+    border:1px solid rgb(87, 87, 87);
+    position:relative;
+    cursor: pointer;
+}
+.post_preview:hover{
+    background-color: rgb(238, 238, 238);
+    transition:all .3s ease;
+}
+.post_pre1{
+    position:relative;
+    z-index:10;
+    cursor: pointer;
+}
+.post_preview::before{
+    content: "";
+    width: 50px;
+    height: 6px;
+    position: absolute;
+    top:132px;
+    left: 110px;
+    background-color: rgb(193, 193, 193);
+    border-radius: 10px;
+}
+.post_preview::after{
+    content: "";
+    width: 50px;
+    height: 6px;
+    position: absolute;
+    top:132px;
+    left: 110px;
+    background-color: rgb(193, 193, 193);
+    border-radius: 10px;
+    transform: rotate(90deg);
+}
+.post_preview1{
+    width:100px;
+    height: 100px;
+    background-color: blueviolet;
+    display: flex;
+}
 
 @media screen and (max-width:480px) {
     .new_field{
@@ -101,16 +146,22 @@
     }
     .new_field li{
         width:90%;
-        min-width: 90%;
+    }
+    .new_detail{
+        margin-right: 0px;
     }
     .new_text{
        width:100%;
-        min-width: 100%;
-       width:1000%;
+       margin-right:0px;
     }
     .bt-area a {
         width:80%;
-        min-width: 80%;
       }
+    .at_start_post{
+        padding-left:24px;
+    }
+    .post_preview{
+        right:20px;
+    }
     
 }
