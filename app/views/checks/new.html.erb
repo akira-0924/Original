@@ -1,10 +1,18 @@
 <div class="main user_content">  
 <div class="icon" id="icon_c">
     <% @user.each do |i| %>
-      <%= image_tag i.image_url,class: "icon_image", size: "50x50" if i.image? %>
+        <% if i.image.present? %>
+            <%= image_tag i.image_url,class: "icon_image", size: "50x50" if i.image? %>
+        <% else %>
+            <%= image_tag '/images/icon.jpg',class: "icon_image", size: "50x50" %></br>
+        <% end %>
       <div class="icon_modal">
         <%= link_to user_path(current_user.id),data: {"turbolinks" => false}, method: :get do %>
-          <%= image_tag i.image_url,class: "icon_image_mo", size: "100x100" if i.image? %>
+            <% if i.image.present? %>
+                <%= image_tag i.image_url,class: "icon_image_mo", size: "100x100" if i.image? %>
+            <% else %>
+                <%= image_tag '/images/icon.jpg',class: "icon_image_mo", size: "80x80" %></br>
+            <% end %>
         <% end %>
         <span class="icon_dis icon_name"><%= i.name %></span>
         <br><span class="icon_dis icon_mail"><%= i.email %></span>
@@ -31,7 +39,7 @@
         </section>
         <h1>Q2</h1>
         <section class="q_all2">
-            <p class="q_title">II.1番好きな曲を選択してください</p>
+            <p class="q_title">II.１番好きな曲を選択してください</p>
                 <div class="Q2_branch" id="Q_02A">
                     <label class="label2 q2_top"><%= f.radio_button :q2, "選択1",class:"Q2_mu",id:"type1" %> 夢追いベンガル </label>
                     <br><label class="label2"><%= f.radio_button :q2, "選択2",class:"Q2_mu",id:"type2" %> 生きていたんだよな </label>
