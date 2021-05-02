@@ -1,4 +1,18 @@
 <div class="main">
+    <div class="icon" id="icon_c">
+        <% @user.each do |i| %>
+            <%= image_tag i.image_url,class: "icon_image", size: "50x50" if i.image? %>
+            <div class="icon_modal">
+                <%= link_to user_path(current_user.id),data: {"turbolinks" => false}, method: :get do %>
+                    <%= image_tag i.image_url,class: "icon_image_mo", size: "100x100" if i.image? %>
+                <% end %>
+                <span class="icon_dis icon_name"><%= i.name %></span>
+                <br><span class="icon_dis icon_mail"><%= i.email %></span>
+                <br><%= link_to "マイページ", user_path(current_user.id),class:"modal_show modal_show1", data: {"turbolinks" => false} %>
+                <%= link_to "プロフィール編集", edit_user_registration_path , class: 'modal_show modal_show2' , data: {"turbolinks" => false} %>
+                </div>
+        <% end %>
+    </div>
   <h2 class="result_title">あなたにオススメしたいバンドは...</h2>
     <div class="result_container">
         <% @check.each do |t| %>
@@ -14,6 +28,12 @@
                     <a href ="<%= t.result.m_video %>"><i class="fab fa-youtube"></i></a></p>
                     <br><i class="fas fa-guitar"></i><label class="rock_lab">Description</label>
                     <p class="de_br"><%= t.result.discription %></p>
+                    <h3 class="tweet_title"> SNS で診断結果をシェアする</h3>
+                    <div class="check_share">
+                        <%= link_to  "https://twitter.com/share?url=https://rockintroduction.herokuapp.com/checks/new&text=私の診断結果は、'#{t.result.band_name}' でした", title: 'Twitter', target: '_blank'  do %>
+                            <i class="fab fa-twitter fa-3x tw_share"></i><span class="sh_span">Tweet</span>
+                        <% end %>
+                    </div>
                 <div class="bt-area">
                     <%= link_to "リトライ", new_check_path, data: {"turbolinks" => false} %>
                 </div>
