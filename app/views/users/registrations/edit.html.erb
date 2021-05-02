@@ -11,7 +11,11 @@
             <div class="icon_container">
             <i class="far fa-edit fa-2x"></i>
               <div class="preview" id="outputWrapper"></div>
-              <%= image_tag @user.image_url,class: "user_image edit_image",id:"icon_preview", size: "120x120" if @user.image? %></br>
+              <% if @user.image.present? %>
+                <%= image_tag @user.image_url,class: "user_image edit_image",id:"icon_preview", size: "120x120" if @user.image? %></br>
+              <% else %>
+              <%= image_tag '/images/icon.jpg',class: "user_image edit_image",id:"icon_preview", size: "120x120" %></br>
+              <% end %>
             </div>
               <br><%= f.file_field :image , class: 'new_text img_post',id:"upload_icon" %>
           </label>
