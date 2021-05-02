@@ -5,13 +5,12 @@
 .artist{
     text-align:center;
     margin-top:20px;
-    font-family: 'Shadows Into Light', cursive;
 }
 
 .artist h3{
     color:rgb(255, 255, 255);
     letter-spacing:10px;
-    margin:40px 10px 10px 30px;
+    margin:40px 10px 10px 10px;
 }
 
 .atshow-header{
@@ -20,7 +19,6 @@
     color:rgb(255, 255, 255);
     text-align: center;
     margin-left:42%;
-    font-family: 'Shadows Into Light', cursive;
     font-size:25px;
     text-shadow: 2px 3px 2px #5e5e5e;
 }
@@ -60,6 +58,7 @@
     margin-bottom:10px;
     padding:5px 10px;
     min-width:400px;
+    font-size:30px;
 }
 
 .recommend:hover{
@@ -119,7 +118,6 @@
     transition: all ease-in-out 0.2s;
 }
 
-
 @media screen and (max-width:480px) {
     .img_name{
         width:90%;
@@ -139,5 +137,8 @@
     }
     .atshow-header{
         margin-left:22%;
+    }
+    .show_images{
+        margin-left:8px;
     }
 }
