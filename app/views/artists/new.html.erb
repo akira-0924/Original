@@ -46,7 +46,8 @@
           ["メタル","メタル"],
           ["フォーク","フォーク"],
           ["インスト","インスト"],
-          ["R&B","R&B"]],include_blank: "選択して下さい", class: 'new_text' %></li>
+          ["R&B","R&B"],
+          ["その他","その他"]],include_blank: "選択して下さい", class: 'new_text' %></li>
           <div class="new_detail">
             <li><%= f.label :邦楽or洋楽 %></li>
           </div>
@@ -66,8 +67,10 @@
             <li><%= f.text_field :other, :size => 50, class: 'new_text' %></li>
           <div class="new_detail">
             <li><%= f.label :画像 %></li>
+            <label>
+            <div class="post_preview" id="POST_PREVIEW"></div>
+            <li><%= f.file_field :image , class: 'new_text img_post', id:"post_pre" %></li>
           </div>
-          <li><%= f.file_field :image , class: 'new_text img_post' %></li>
       </ul>
         <%= f.submit "投稿する" , class: 'submit-btn' %>
     <% end %>
