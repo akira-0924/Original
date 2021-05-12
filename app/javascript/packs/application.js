@@ -190,6 +190,7 @@ $(function () {
 		};
 		fileReader.readAsDataURL( selectedFile );
 	});
+	
 	$( '#post_pre' ).on("change", function () {
 		var selectedFile = this.files[0];
 		var fileReader = new FileReader();
